@@ -1,61 +1,54 @@
-/* draggable element */
-const item = document.querySelector('.item');
+var mousePosition;
+var offset = [0,0];
 
-item.addEventListener('dragstart', dragStart);
+var isDown = false;
 
-function dragStart(e) {
-    e.dataTransfer.setData('text/plain', e.target.id);
-    setTimeout(() => {
-        e.target.classList.add('hide');
-    }, 0);
-}
+div = document.getElementById("item");
 
-
-/* drop targets */
-const boxes = document.querySelectorAll('.box');
-
-boxes.forEach(box => {
-    box.addEventListener('dragenter', dragEnter)
-    box.addEventListener('dragover', dragOver);
-    box.addEventListener('dragleave', dragLeave);
-    box.addEventListener('drop', drop);
-});
+div.addEventListener('mousedown', function(e) {
+    isDown = true;
+    div.style.position = "absolute";
+    offset = [
+        div.offsetLeft - e.clientX,
+        div.offsetTop - e.clientY
+    ];
 
 
-function dragEnter(e) {
-    e.preventDefault();
-    e.target.classList.add('drag-over');
-}
+    //if
+}, true);
 
-function dragOver(e) {
-    e.preventDefault();
-    e.target.classList.add('drag-over');
-}
+document.addEventListener('mouseup', function() {
+    isDown = false;
+}, true);
 
-function dragLeave(e) {
-    e.target.classList.remove('drag-over');
+document.addEventListener('mousemove', function(event) {
+    event.preventDefault();
+    if (isDown) {
+        mousePosition = {
 
-    // get the draggable element
-    const id = e.dataTransfer.getData('text/plain');
-    const draggable = document.getElementById(id);
+            x : event.clientX,
+            y : event.clientY
 
-    // add it to the drop target
-    e.target.appendChild(draggable);
+        };
+        div.style.left = (mousePosition.x + offset[0]) + 'px';
+        div.style.top  = (mousePosition.y + offset[1]) + 'px';
 
-    // display the draggable element
-    draggable.classList.remove('hide');
-}
+        var rect = document.getBoundingClientRect();
+        console.log(rect.top, rect.right, rect.bottom, rect.left);
+    }
+}, true);
 
 function drop(e) {
-    e.target.classList.remove('drag-over');
-
+    console.log("drop");
+    e.target.classList.remove('contour-drag');
+    
     // get the draggable element
     const id = e.dataTransfer.getData('text/plain');
     const draggable = document.getElementById(id);
-
+    
     // add it to the drop target
     e.target.appendChild(draggable);
-
-    // display the draggable element
-    draggable.classList.remove('hide');
+    
+     // display the draggable element
+    draggable.classList.remove('hide'); 
 }
