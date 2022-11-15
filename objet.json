@@ -14,19 +14,19 @@
     "dossier":{
         "x0" : 15,
         "y0" : 645,
-        "titre0": "Reformulation besoin",
+        "titre0": "Reformulation du besoin",
 
         "x1" : 15,
         "y1" : 330,
-        "titre1": "Organisation Projet",
+        "titre1": "Spécifications fonctionnelles",
 
         "x2" : 575,
         "y2" : 85,
-        "titre2": "Gestion des risques",
+        "titre2": "Spécifications techniques",
 
         "x3" : 418,
         "y3" : 470,
-        "titre3": "Planning",
+        "titre3": "Organisation du projet",
 
         "size" :40
     },
