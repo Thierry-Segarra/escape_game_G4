@@ -1,24 +1,29 @@
 var mousePosition;
-var offset = [0,0];
+var div;
 
 var isDown = false;
 
-div = document.getElementById("item");
+// Drag and drop //
 
-div.addEventListener('mousedown', function(e) {
+document.addEventListener('mousedown', function(e) {
     isDown = true;
-    div.style.position = "absolute";
-    offset = [
-        div.offsetLeft - e.clientX,
-        div.offsetTop - e.clientY
-    ];
-
-
-    //if
+    if (document.elementFromPoint(e.clientX, e.clientY).className === "item"){
+        div = document.elementFromPoint(e.clientX, e.clientY)
+        div.style.zIndex = 0;
+        div.style.position = "absolute";
+    }
 }, true);
 
-document.addEventListener('mouseup', function() {
+document.addEventListener('mouseup', function(e) {
     isDown = false;
+    if (document.elementFromPoint(e.clientX, e.clientY).className === "box"){
+        box = document.elementFromPoint(e.clientX, e.clientY);
+        div.style.zIndex = 2;
+
+        box.appendChild(div);
+        div.style.position = "static";
+        div = null;
+    }
 }, true);
 
 document.addEventListener('mousemove', function(event) {
@@ -30,25 +35,9 @@ document.addEventListener('mousemove', function(event) {
             y : event.clientY
 
         };
-        div.style.left = (mousePosition.x + offset[0]) + 'px';
-        div.style.top  = (mousePosition.y + offset[1]) + 'px';
-
-        var rect = document.getBoundingClientRect();
-        console.log(rect.top, rect.right, rect.bottom, rect.left);
+        div.style.left = (mousePosition.x + 10) + 'px';
+        div.style.top  = (mousePosition.y + 10) + 'px';
     }
 }, true);
 
-function drop(e) {
-    console.log("drop");
-    e.target.classList.remove('contour-drag');
-    
-    // get the draggable element
-    const id = e.dataTransfer.getData('text/plain');
-    const draggable = document.getElementById(id);
-    
-    // add it to the drop target
-    e.target.appendChild(draggable);
-    
-     // display the draggable element
-    draggable.classList.remove('hide'); 
-}
+// Verification des phrases //

@@ -1,9 +1,9 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-body {
+body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 16px;
     background-image: url("images/stage.png");
@@ -12,7 +12,7 @@ body {
     background-position: center;
 }
 
-.container {
+.container{
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -20,33 +20,35 @@ body {
     align-items: center;
 }
 
-.box {
-    height: 150px;
+.box{
+    height: 110px;
     width: 150px;
     border: solid 3px #ccc;
     border-radius: 10px;
-    margin: 10px;
+    margin: 2px;
+    padding: 2px;
 
     /* align items in the box */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    z-index: 1;
 }
 
-.contour-drag {
+.contour-drag{
     border: dashed 3px red;
 }
 
-.item { 
+.item{ 
     height: 100px;
-    width: 100px;
+    width: 150px;
     background-color: #F0DB4F;
-    border-radius: 3px ;
-
+    border-radius: 10px;
+    z-index: 0;
 }
 
-.hide {
+.hide{
     display: none;
 }
