@@ -72,7 +72,7 @@ fetch("objet.json")
         let wm = 0;
         let xm = 0;
         let ym = 0;
-        <?php for ($a=0; $a < 10 ; $a++) { ?>
+        <?php for ($a=0; $a < 40 ; $a++) { ?>
           xm= data.mur.x<?php echo $a ?>;
           ym= data.mur.y<?php echo $a ?>;
           hm= data.mur.h<?php echo $a ?>;
@@ -99,30 +99,30 @@ document.addEventListener("keyup", keyUpHandler, false);
 //document.addEventListener("mousemove", mouseMoveHandler, false);
 
 function keyDownHandler(e) {
-    if(e.key == "ArrowRight") {
+    if(e.key == "d") {
         rightPressed = true;
     }
-    else if(e.key == "ArrowLeft") {
+    else if(e.key == "q") {
         leftPressed = true;
     }
-    else if(e.key == "ArrowUp") {
+    else if(e.key == "z") {
         upPressed = true;
     }
-    else if(e.key == "ArrowDown") {
+    else if(e.key == "s") {
         downPressed = true;
     }
 }
 function keyUpHandler(e) {
-    if(e.key == "ArrowRight") {
+    if(e.key == "d") {
         rightPressed = false;
     }
-    else if(e.key == "ArrowLeft") {
+    else if(e.key == "q") {
         leftPressed = false;
     }
-    else if(e.key == "ArrowUp") {
+    else if(e.key == "z") {
         upPressed = false;
     }
-    else if(e.key == "ArrowDown") {
+    else if(e.key == "s") {
         downPressed = false;
     }
 }
@@ -220,23 +220,23 @@ function draw() {
 
   if(rightPressed && paddleX < canvas.width-playerSize) {
     rightverif = right(mur,paddleX,paddleY,playerSize);
-    if(rightverif === false){paddleX += 3}
+    if(rightverif === false){paddleX += speed}
     
   }
   else if(leftPressed && paddleX > 0) {
     leftverif = left(mur,paddleX,paddleY,playerSize);
-    if(leftverif === false){paddleX -= 3}
+    if(leftverif === false){paddleX -= speed}
   }
   
   if(downPressed && paddleY < canvas.height-playerSize) {
     downverif = down(mur,paddleX,paddleY,playerSize);
-    if(downverif === false){paddleY += 3;}
+    if(downverif === false){paddleY += speed;}
     
   }
   else if(upPressed && paddleY > 0) {
     
     upverif = up(mur,paddleX,paddleY,playerSize);
-    if(upverif === false){paddleY -= 3;}
+    if(upverif === false){paddleY -= speed;}
   }
 
   x += dx;
