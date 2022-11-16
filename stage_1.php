@@ -25,7 +25,8 @@
     <span id="code3"></span>
     <span id="code4"></span>
 </div>
-<input type="number" id="inputVerif" min="0" max="9999"></input><button onclick="verifier()">valider code</button>
+<div id="inputnb"></div>
+
 
 
 <?php include("game.php") ?>

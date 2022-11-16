@@ -22,6 +22,10 @@ var upPressed = false;
 var downPressed = false;
 var nb_dossier = 4;
 
+var endSize = 35;
+var endStatus = 0;
+var lockEnd = false;
+
 let rightverif = false;
 let leftverif = false;
 let upverif = false;
@@ -156,6 +160,16 @@ function collisionDetection() {
       }
   }
 }
+var lockendStatus = false;
+function collisionDetectionEND() {
+      if(endStatus == 1 && lockendStatus == false) {
+        if(paddleX+playerSize > canvas.width - endSize && paddleX < canvas.width && paddleY+playerSize > canvas.height - endSize && paddleY < canvas.height) {
+          lockendStatus == true;
+          document.getElementById("inputnb").innerHTML ='<input type="number" id="inputVerif" min="0" max="9999"></input><button onclick="verifier()">valider code</button>';
+        }
+      }
+  }
+
 
 function drawPaddle() {
   ctx.beginPath();
@@ -163,6 +177,26 @@ function drawPaddle() {
   ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();
+}
+
+function drawEnd() {
+  if(endStatus == 1) {
+    ctx.beginPath();
+    ctx.rect(canvas.width - endSize, canvas.height - endSize, endSize, endSize);
+    ctx.fillStyle = "green";
+    ctx.fill();
+    ctx.closePath();
+  }
+}
+
+function DossierCollecter() {
+  endStatus = 1;
+  for(var c=0; c < dossier.length; c++) {
+        var b = dossier[c];
+        if(b.status == 1) {
+          endStatus = 0;
+        }
+  }
 }
 
 function drawdossier() {
@@ -177,6 +211,7 @@ function drawdossier() {
           ctx.fillStyle = "#0095DD";
           ctx.fill();
           ctx.closePath();
+
         }
     }
   }
@@ -210,11 +245,14 @@ function drawLives() {
 */
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
+  drawEnd()
+  collisionDetectionEND()
+  DossierCollecter()
   drawmur()
   collisionDetection();
   drawdossier();
   drawPaddle();
+  
   
 
 
