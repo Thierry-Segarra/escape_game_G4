@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Workspace</title>
+    </head>
+
+<body>
+<input type="text" id="input_mots">
+<button onclick="verifiermots()">valider</button>
+<div id="reponse_mots"></div>
+
+<div id="morsecacher">
+<span class="couleurcacher" id="couleur1"></span>
+<span class="couleurcacher" id="couleur2"></span>
+<span class="couleurcacher" id="couleur3"></span>
+<span class="couleurcacher" id="couleur4"></span>
+</div>
+
+<div>
+    <span style="background-color: red ;" id="nb1">0</span><button id="nb1_1" onclick="locknumber(1)">Bloquer</button><br>
+    <span style="background-color: blue ;" id="nb2">0</span><button id="nb2_2" onclick="locknumber(2)">Bloquer</button><br>
+    <span style="background-color: green ;" id="nb3">0</span><button id="nb3_3" onclick="locknumber(3)">Bloquer</button><br>
+    <span style="background-color: yellow ;"id="nb4">0</span><button id="nb4_4" onclick="locknumber(4)">Bloquer</button><br>
+</div>
+
+<div id="morse"></div>
+
+<script src="stage_4_js.js"></script>
+</body>
+</html>
