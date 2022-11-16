@@ -6,10 +6,6 @@ var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
 var y = canvas.height-30;
 
-
-
-
-
 var dx = 2;
 var dy = -2;
 var playerSize = 0;
@@ -47,6 +43,12 @@ var code = '';
 var dossier = [];
 var mur = [];
 
+var image = document.getElementById("source");
+var image_mur = document.getElementById("source1");
+
+var nb_dossier_image = 1;
+
+
 fetch("objet.json")
 .then(response => response.json())
 .then(data =>{
@@ -67,7 +69,8 @@ fetch("objet.json")
           titre= data.dossier.titre<?php echo $i ?>;
           nombre = getRandomInt();
           code = code + nombre;
-          dossier[<?php echo $i ?>] = { x: x, y: y, size: size, status: 1, titre: titre, nombre: nombre };
+          image_dossier = image_doc(nb_dossier_image);
+          dossier[<?php echo $i ?>] = { x: x, y: y, size: size, status: 1, titre: titre, nombre: nombre ,image_dossier: image_dossier};
         <?php }; ?>
       
     // Mur
@@ -105,29 +108,50 @@ document.addEventListener("keyup", keyUpHandler, false);
 function keyDownHandler(e) {
     if(e.key == "d") {
         rightPressed = true;
+        leftPressed = false;
+        upPressed = false;
+        downPressed = false;
+        animation_mouve("right",rightPressed);
     }
     else if(e.key == "q") {
+        rightPressed = false;
         leftPressed = true;
+        upPressed = false;
+        downPressed = false;
+        animation_mouve("left",leftPressed);
     }
     else if(e.key == "z") {
+        rightPressed = false;
+        leftPressed = false;
         upPressed = true;
+        downPressed = false;
+        animation_mouve("up",upPressed);
     }
     else if(e.key == "s") {
+        rightPressed = false;
+        leftPressed = false;
+        upPressed = false;
         downPressed = true;
+        animation_mouve("down",downPressed);
     }
 }
+
 function keyUpHandler(e) {
     if(e.key == "d") {
         rightPressed = false;
+        animation_mouve("right",rightPressed);
     }
     else if(e.key == "q") {
         leftPressed = false;
+        animation_mouve("left",leftPressed);
     }
     else if(e.key == "z") {
         upPressed = false;
+        animation_mouve("up",upPressed);
     }
     else if(e.key == "s") {
         downPressed = false;
+        animation_mouve("down",downPressed);
     }
 }
 function collisionDetection() {
@@ -161,10 +185,11 @@ function collisionDetection() {
   }
 }
 var lockendStatus = false;
+
 function collisionDetectionEND() {
       if(endStatus == 1 && lockendStatus == false) {
         if(paddleX+playerSize > canvas.width - endSize && paddleX < canvas.width && paddleY+playerSize > canvas.height - endSize && paddleY < canvas.height) {
-          lockendStatus == true;
+          lockendStatus = true;
           document.getElementById("inputnb").innerHTML ='<input type="number" id="inputVerif" min="0" max="9999"></input><button onclick="verifier()">valider code</button>';
         }
       }
@@ -174,8 +199,7 @@ function collisionDetectionEND() {
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, paddleY, playerSize, playerSize);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
+  ctx.drawImage(image, paddleX - 5, paddleY - 5, 30,30);
   ctx.closePath();
 }
 
@@ -203,13 +227,11 @@ function drawdossier() {
     for(var c=0; c < dossier.length; c++) {
         var b = dossier[c];
         if(b.status == 1) {
-          
           var brickX = (b.x);
           var brickY = (b.y);
           ctx.beginPath();
           ctx.rect(brickX, brickY, brickWidth, brickHeight);
-          ctx.fillStyle = "#0095DD";
-          ctx.fill();
+          ctx.drawImage(b.image_dossier, brickX - 5, brickY - 5, brickWidth,brickHeight);
           ctx.closePath();
 
         }
@@ -225,7 +247,7 @@ function drawdossier() {
         var brickHeight = (b.h);
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#000000";
+        ctx.fillStyle = ctx.createPattern(image_mur, "repeat");
         ctx.fill();
         ctx.closePath();
     }
@@ -268,13 +290,13 @@ function draw() {
   
   if(downPressed && paddleY < canvas.height-playerSize) {
     downverif = down(mur,paddleX,paddleY,playerSize);
-    if(downverif === false){paddleY += speed;}
+    if(downverif === false){paddleY += speed}
     
   }
   else if(upPressed && paddleY > 0) {
     
     upverif = up(mur,paddleX,paddleY,playerSize);
-    if(upverif === false){paddleY -= speed;}
+    if(upverif === false){paddleY -= speed}
   }
 
   x += dx;
@@ -366,6 +388,109 @@ function getRandomInt() {
   return Math.floor(Math.random() * 9);
 }
 
+var lock_move_left = false;
+var lock_move_right = false;
+var lock_move_up = false;
+var lock_move_down = false;
+
+var animation_move_image;
+
+var nb_image = 2;
+
+function animation_mouve(move, lock){
+
+  if(lock == true){
+    if (move == 'left') {
+      if(lock_move_left == false){
+        lock_move_left = true;
+        lock_move_right = false;
+        lock_move_up = false;
+        lock_move_down = false;
+        clearInterval(animation_move_image);
+        nb_image = 1;
+        document.getElementById("source").src = 'image/left1.png';
+        animation_move_image = setInterval(animation_player_move, 100, 'left');
+      }
+      
+
+    }else if (move == 'right') {
+
+      if(lock_move_right == false){
+        lock_move_left = false;
+        lock_move_right = true;
+        lock_move_up = false;
+        lock_move_down = false;
+        clearInterval(animation_move_image);
+        nb_image = 2;
+        document.getElementById("source").src = 'image/right1.png';
+        animation_move_image = setInterval(animation_player_move, 100, 'right');
+      }
+
+    }else if (move == 'up') {
+      if(lock_move_up == false){
+        lock_move_left = false;
+        lock_move_right = false;
+        lock_move_up = true;
+        lock_move_down = false;
+        clearInterval(animation_move_image);
+        nb_image = 2;
+        document.getElementById("source").src = 'image/up1.png';
+        animation_move_image = setInterval(animation_player_move, 100, 'up');
+      }
+    }else if (move == 'down') {
+      if(lock_move_down == false){
+        lock_move_left = false;
+        lock_move_right = false;
+        lock_move_up = false;
+        lock_move_down = true;
+        clearInterval(animation_move_image);
+        nb_image = 2;
+        document.getElementById("source").src = 'image/down1.png';
+        animation_move_image = setInterval(animation_player_move, 100, 'down');
+      }
+    }
+  }else{
+    lock_move_left = false;
+    lock_move_right = false;
+    lock_move_up = false;
+    lock_move_down = false;
+    
+    
+    
+    
+    clearInterval(animation_move_image);
+  }
+
+}
+
+function animation_player_move(direction){
+  if(nb_image >4){
+    nb_image = 1;
+  }
+  if(direction == 'left'){
+    document.getElementById("source").src = 'image/left'+nb_image+'.png';
+    nb_image++;
+  }else if(direction == 'right'){
+    document.getElementById("source").src = 'image/right'+nb_image+'.png';
+    nb_image++;
+  }else if(direction == 'up'){
+    document.getElementById("source").src = 'image/up'+nb_image+'.png';
+    nb_image++;
+  }else if(direction == 'down'){
+    document.getElementById("source").src = 'image/down'+nb_image+'.png';
+    nb_image++;
+  }
+  
+  
+}
+
+function image_doc(id){
+  let nb_image = Math.floor(Math.random() * (3) + 1);
+  document.getElementById("doc"+id).src = 'image/document_'+nb_image+'.png';
+  let image_doc = document.getElementById("doc"+id);
+  nb_dossier_image++;
+  return image_doc; 
+}
 // expected output: 0, 1 or 2
 
 </script>

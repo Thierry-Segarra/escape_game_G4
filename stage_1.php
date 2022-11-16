@@ -5,8 +5,15 @@
     <title>Stage 1</title>
 </head>
 
-<canvas id="canvas">
+<canvas id="canvas" class="canvas">
 </canvas>
+<img id="source" src="image/down1.png"width="8" height="8">
+<img id="source1" src="image/mur.png"width="8" height="8">
+
+<img id="doc1" src=""width="8" height="8">
+<img id="doc2" src=""width="8" height="8">
+<img id="doc3" src=""width="8" height="8">
+<img id="doc4" src=""width="8" height="8">
 
 <script type="text/javascript" >
     var canvas = document.getElementById("canvas");
