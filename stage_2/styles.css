@@ -33,7 +33,7 @@ body{
 .box{
     width: 150px;
     height: 100px;
-    border: solid 3px #ccc;
+    border: dashed 2px rgb(37, 37, 37);
     border-radius: 10px;
     margin-top: 40px;
     padding: 2px;
@@ -49,6 +49,7 @@ body{
 /* Div table */
 
 .whole_table{
+    position: relative;
     display: flex;
     flex-direction: column;
     vertical-align: middle;
@@ -88,6 +89,7 @@ body{
     background-image: url(images/table_bottom.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: visible;
     
     display: flex;
     justify-content: center;
@@ -98,19 +100,28 @@ body{
     height: 180px;
 }
 
-
 .chef{
     position: absolute;
-    bottom: 50px;
+    bottom: -100px;
+    pointer-events:none;
+    z-index: 20;
 
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.person{
+.person_left{
     width: 70px;
     overflow: hidden;
+    pointer-events:none;
+}
+.person_right{
+    width: 70px;
+    overflow: hidden;
+    pointer-events:none;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .disposable{
@@ -131,41 +142,25 @@ body{
     border: dashed 3px red;
 }
 
+.ignore{
+    pointer-events:none;
+}
+
 .item{ 
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 
     height: 100px;
-    width: 150px;
-    background-color: rgba(0, 0, 0, 0);
+    width: 100px;
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 3px;
     z-index: 0;
 }
 
-.red_button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-}
-.red_button img{
-    width: 100px;
-    height: 100px;
-}
-
 .hide{
     display: none;
-}
-
-.terminal{
-    position: absolute;
-    top: 75%;
-    left: 79%;
-    width: 20%;
 }
 
 /* Bulle de texte */
@@ -184,7 +179,7 @@ body{
     text-align: center;
     font-family: "Pixel";
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 80%;
     width: 10px;
     height: 90px;
@@ -194,7 +189,7 @@ body{
     text-align: center;
     font-family: "Pixel";
     position: absolute;
-    top: 40%;
+    top: 48%;
     left: 80%;
     width: 10px;
     height: 90px;
@@ -214,7 +209,7 @@ body{
     text-align: center;
     font-family: "Pixel";
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 1%;
     width: 10px;
     height: 90px;
@@ -224,7 +219,7 @@ body{
     text-align: center;
     font-family: "Pixel";
     position: absolute;
-    top: 40%;
+    top: 48%;
     left: 1%;
     width: 10px;
     height: 90px;
@@ -236,40 +231,84 @@ body{
 }
 .centered {
     position: absolute;
+    width: 320px;
+    top: 20%;
+    left: 80%;
+}
+
+/* Terminal */
+
+.terminal{
+    text-align: center;
+    font-family: "Pixel";
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 10px;
+    height: 90px;
+    color: rgb(0, 0, 0);
+}
+.terminal img{
+    width: 390px;
+}
+.terminal_text {
+    font-size: 35px;
+    position: absolute;
     width: 300px;
-    top: 30%;
-    left: -10px;
+    top: 0px;
+    left: -80px;
+}
+.terminal_subtext {
+    font-size: 30px;
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    left: 30px;
 }
 
-/* Documents */
+/* Button */
 
-.item_1{
-    background-image: url('images/document_1.png');
+.red_button{
+    background-image: url('images/button_up.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-family: "Pixel";
+    position: absolute;
+    top: 92%;
+    left: 82%;
+    width: 300px;
+    height: 180px;
+    color: white;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+    z-index: 50;
 }
-.item_2{
-    background-image: url('images/document_2.png');
+.red_button:active{
+    background-image: url('images/button_down.png');
 }
-.item_3{
-    background-image: url('images/document_2.png');
-}
-.item_4{
-    background-image: url('images/document_3.png');
-}
-.item_5{
-    background-image: url('images/document_1.png');
-}
-.item_6{
-    background-image: url('images/document_3.png');
+.red_button_text {
+    font-size: 35px;
+    position: absolute;
+    width: 300px;
+    top: -40px;
 }
 
-.item_1{
-    background-image: url('images/document_1.png');
+/* Horloge */
+
+.clock{
+    background-image: url('images/clock.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-family: "Pixel";
+    position: absolute;
+    top: 74.1%;
+    left: 3%;
+    width: 100px;
+    height: 100px;
+    color: rgb(0, 0, 0);
+    z-index: 50;
 }
-.item_1{
-    background-image: url('images/document_1.png');
-}
-.item_1{
-    background-image: url('images/document_1.png');
-}
+
 
 
