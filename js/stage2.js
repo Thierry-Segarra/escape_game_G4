@@ -120,6 +120,10 @@ document.addEventListener('mousemove', function(event) {
 
 function gameOver(){
     document.getElementById("chef").src = "../images/chef_good.png";
+    let text = `Votre organisation nous mènera au succès !
+    Prochaine étape: la phase de production !`;
+    let suivant = "stage3.php";
+    transitionFermer(text,suivant);
 }
 
 function verification(){

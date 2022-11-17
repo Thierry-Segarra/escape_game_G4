@@ -7,6 +7,15 @@
         <link rel="stylesheet" href="../Styles/stage2.css">
     </head>
 
+    <?php
+    include("../Back/transition.php");
+    ?>
+    <script>
+        textDinamique('textdinamique','text',`Je vous présente votre équipe.
+Il ne manquait plus que vous pour les guider.
+Donnez leur du boulot !`,'<button class="bouton" onclick = "transitionOuver()">Au boulot !</button>');
+    </script>
+
     <body onload="load()">
         <div class="whole_table">
 

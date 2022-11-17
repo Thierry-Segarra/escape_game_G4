@@ -267,43 +267,53 @@ function drawLives() {
   ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 }
 */
+var lock_draw = false;
+function lock_drow_function(){
+  if(lock_draw == false){lock_draw = true;
+  }else if(lock_draw == true){lock_draw = false}
+  
+}
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawEnd()
-  collisionDetectionEND()
-  DossierCollecter()
-  drawmur()
-  collisionDetection();
-  drawdossier();
-  drawPaddle();
-  
-  
+  if(lock_draw == true){
+    
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawEnd()
+    collisionDetectionEND()
+    DossierCollecter()
+    drawmur()
+    collisionDetection();
+    drawdossier();
+    drawPaddle();
+    
+    
 
 
-  if(rightPressed && paddleX < canvas.width-playerSize) {
-    rightverif = right(mur,paddleX,paddleY,playerSize);
-    if(rightverif === false){paddleX += speed}
+    if(rightPressed && paddleX < canvas.width-playerSize) {
+      rightverif = right(mur,paddleX,paddleY,playerSize);
+      if(rightverif === false){paddleX += speed}
+      
+    }
+    else if(leftPressed && paddleX > 0) {
+      leftverif = left(mur,paddleX,paddleY,playerSize);
+      if(leftverif === false){paddleX -= speed}
+    }
     
-  }
-  else if(leftPressed && paddleX > 0) {
-    leftverif = left(mur,paddleX,paddleY,playerSize);
-    if(leftverif === false){paddleX -= speed}
-  }
-  
-  if(downPressed && paddleY < canvas.height-playerSize) {
-    downverif = down(mur,paddleX,paddleY,playerSize);
-    if(downverif === false){paddleY += speed}
-    
-  }
-  else if(upPressed && paddleY > 0) {
-    
-    upverif = up(mur,paddleX,paddleY,playerSize);
-    if(upverif === false){paddleY -= speed}
-  }
+    if(downPressed && paddleY < canvas.height-playerSize) {
+      downverif = down(mur,paddleX,paddleY,playerSize);
+      if(downverif === false){paddleY += speed}
+      
+    }
+    else if(upPressed && paddleY > 0) {
+      
+      upverif = up(mur,paddleX,paddleY,playerSize);
+      if(upverif === false){paddleY -= speed}
+    }
 
-  x += dx;
-  y += dy;
+    x += dx;
+    y += dy;
+  }
   requestAnimationFrame(draw);
+
 }
 draw();
 
@@ -386,6 +396,7 @@ function verifier(){
     Sans ces livrables, le projet se dirigerait droit dans le mur !`;
     let suivant = "stage2.php";
     transitionFermer(text,suivant);
+    lock_drow_function();
   }
 }
 
