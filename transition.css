@@ -1,0 +1,40 @@
+
+  .box {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    margin-left:-100px;
+    height: 110%;
+    width: 110%;
+    background-color: black;
+    transition-property: margin-left;
+    transition-duration: 3s;
+  }
+  .box .text{
+    background-color: black;
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30vh;
+  }
+  .box .text .area{
+    width: 650px;
+    height: 350px;
+    background-color: black;
+    color:white;
+    font-size:20px;
+    resize: none;
+    overflow: auto;
+    border: 0px;
+
+  }
+  .box .text .bouton{
+    background-color: black;
+    color:white;
+    border: solid 2px white;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration:none;
+  }
