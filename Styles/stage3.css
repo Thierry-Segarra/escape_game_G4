@@ -1,0 +1,315 @@
+*{
+    font-family: 'VT323', monospace;
+}
+
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'VT323', monospace;
+    overflow-x: hidden;
+    padding: 1rem;
+    background-color: #aaaaaa;
+    background-image: url('../images/sol_stage3.png');
+    z-index: 1;
+}
+
+
+/* Décorations */
+.line{
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 450px;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.chef{
+    position: absolute;
+    bottom: 50px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.chien{
+    position: absolute;
+    left: -100px;
+    z-index: -5;
+}
+.chien .image{
+    height: 50px;
+    transition-property: margin-left;
+    transition-duration: 10s;
+}
+
+.person{
+    width: 220px;
+    overflow: hidden;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.fontaine_eau {
+    background-image: url('../images/distributeur_eau.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 5%;
+    height: 23%;
+}
+
+.tapisOurs {
+    background-image: url('../images/tapis_ours.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 46%;
+    left: 42%;
+    width: 20%;
+    height: 30%;
+    z-index: -10;
+}
+
+.tapisRouge {
+    background-image: url('../images/tapis_rouge.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    width: 20%;
+    height: 20%;
+    z-index: -100;
+}
+
+.robertCoffee {
+    background-image: url('../images/robert_coffee.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    width: 5%;
+    height: 16%;
+}
+
+.tableCoffee {
+    background-image: url('../images/table_coffee.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 75%;
+    left: 7%;
+    width: 20%;
+    height: 17%;
+}
+
+.plante1 {
+    background-image: url('../images/plante1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    width: 5%;
+    height: 23%;
+}
+
+.plante2 {
+    background-image: url('../images/plante2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 82%;
+    left: 87%;
+    width: 10%;
+    height: 15%;
+}
+
+.plante3 {
+    background-image: url('../images/plante3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 70%;
+    left: 91%;
+    width: 15%;
+    height: 20%;
+}
+
+.deskaqua {
+    background-image: url('../images/desk_aquarium.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 1%;
+    left: 80%;
+    width: 20%;
+    height: 23%;
+}
+
+.chefprojet {
+    background-image: url('../images/chef_bad.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    width: 10%;
+    height: 27%;
+}
+
+/* Bouton validation */
+.red_button{
+    background-image: url('../images/button_up.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-family: "Pixel";
+    position: absolute;
+    top: 82%;
+    left: 88%;
+    width: 150px;
+    height: 60px;
+    color: white;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+}
+.red_button:active{
+    background-image: url('../images/button_down.png');
+}
+.red_button_text {
+    font-size: 30px;
+    position: absolute;
+    width: 300px;
+    top: -40px;
+    left: -100px;
+}
+
+
+/* Modal */
+.modal {
+    display: none; /* par défaut il est caché */
+    position: fixed;
+    z-index: 1; /* pour l'afficher au dessus */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow-x: hidden;
+}
+
+.modal-content {
+    background-image: url('../images/screen_modal.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: "Pixel";
+    margin-left: 20%;    
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+.close {
+    color: #aaaaaa;
+    margin-left:58%;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Quizz */
+.choices {
+    list-style-type: none;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.choices li {
+    margin-bottom: 20px;
+}
+.choices label {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+.choices label,
+input[type="radio"] {
+    cursor: pointer;
+}
+.taille span{
+    align-items: center;
+    font-size: 20px;
+    margin-right:30%;
+   
+}
+
+.title {
+    /* text-align: center; */
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-right: 50%;
+    /* margin: 30px; */
+}
+input[type="radio"] {
+    margin-right: 8px;
+    text-align: center;
+}
+.monImage {
+    max-width:100%;
+    max-height:38%;
+    margin-top: 40px;
+    margin-left: 120px;
+}
+.validation {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    padding: 15px;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+}
+.my-results {
+    position: absolute;
+    font-family: "Pixel";
+    top: 2%;
+    left: 38%;
+    padding: 1rem;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.buttonQuestion {
+    margin-left: 28%;
+    margin-top: 1%;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+    padding: 10px;
+}
