@@ -305,7 +305,7 @@ function draw() {
   y += dy;
   requestAnimationFrame(draw);
 }
-setInterval(draw(),100)
+draw();
 
 
 function right(mur,paddleX,paddleY,playerSize){
