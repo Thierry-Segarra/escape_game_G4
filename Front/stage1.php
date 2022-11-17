@@ -5,7 +5,7 @@
     <title>Stage 1</title>
 </head>
 <?php
-include("../back/transition.php");
+include("../Back/transition.php");
 ?>
 <script>
     textDinamique('textdinamique','text',`Le projet ne doit pas tomber à l'eau !

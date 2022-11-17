@@ -1,10 +1,8 @@
-function transitionFermer() {
+function transitionFermer(text,lien) {
   document.getElementById("transition").style.marginLeft = "-100px";
   document.getElementById("text").innerHTML = '<textarea class="area" id="textdinamique" disabled></textarea>';
   let div = 'textdinamique';
-  let text = `Surprenant ! La phase de cadrage ne vous a pas vu venir.
-Sans ces livrables, le projet se dirigerait droit dans le mur !`;
-  let suivant = '<a class="bouton" href="stage_2.php">Suivant</a>';
+  let suivant = '<a class="bouton" href="'+lien+'">Suivant</a>';
   let bouton = 'text';
   setTimeout(textDinamique,3000,div,bouton, text,suivant)
 }

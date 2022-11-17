@@ -382,7 +382,10 @@ function verifier(){
   
   console.log(inputVerif);
   if(inputVerif == code){
-    //document.location.href="game.php"; 
+    let text = `Surprenant ! La phase de cadrage ne vous a pas vu venir.
+    Sans ces livrables, le projet se dirigerait droit dans le mur !`;
+    let suivant = "stage_2.php";
+    transitionFermer(text,suivant);
   }
 }
 
