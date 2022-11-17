@@ -2,7 +2,7 @@ body{
     background-image: url("../images/fond.png");
     background-repeat: repeat;
 
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 

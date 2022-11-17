@@ -1,7 +1,7 @@
 .box {
   position: absolute;
   z-index: 10;
-  top: 0;
+  top: -10;
   left: 0;
   margin-left: -100px;
   height: 110%;
