@@ -190,7 +190,7 @@ function collisionDetectionEND() {
       if(endStatus == 1 && lockendStatus == false) {
         if(paddleX+playerSize > canvas.width - endSize && paddleX < canvas.width && paddleY+playerSize > canvas.height - endSize && paddleY < canvas.height) {
           lockendStatus = true;
-          document.getElementById("inputnb").innerHTML ='<input type="number" id="inputVerif" min="0" max="9999"></input><button onclick="verifier()">valider code</button>';
+          document.getElementById("inputnb").innerHTML ='<input class="number" type="number" id="inputVerif" min="0" max="9999"></input><button class="validation" onclick="verifier()">valider code</button>';
         }
       }
   }
@@ -382,7 +382,7 @@ function verifier(){
   
   console.log(inputVerif);
   if(inputVerif == code){
-    document.location.href="game.php"; 
+    //document.location.href="game.php"; 
   }
 }
 
