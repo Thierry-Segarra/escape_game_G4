@@ -20,16 +20,30 @@
 
 
 <!-- Bouton VALIDER -->
-<div class="red_button" onclick="returnScore()">
+<!-- <div class="red_button" onclick="returnScore()">
     <div class="red_button_text">VALIDER</div>
-</div>
+</div> -->
 
 <!-- Elements de décor -->
 <div class="fontaine_eau"></div>
 
+<div class="robertCoffee"></div>
+
 <div class="plante1"></div>
 
+<div class="plante2"></div>
+
+<div class="plante3"></div>
+
 <div class="deskaqua"></div>
+
+<div class="chefprojet"></div>
+
+<div class="tableCoffee"></div>
+
+<div class="tapisOurs"></div>
+
+<div class="tapisRouge"></div>
 
 <!-- FRONT élèves avec bureau -->
 <div class="line">
@@ -42,6 +56,8 @@
     <img class="person" id="btnStudent3" src="images/dude_5_angry.png">
 </div>
 
+<div  class="chien" id="initchien"></div>
+
 <div class="line">
     <img class="person" id="btnStudent4" src="images/dude_6_angry.png">
     <img class="person" src="images/dude_2_happy.png">
@@ -53,9 +69,9 @@
     <div class="modal-content">
         <span class="close">&times;</span>
            
-                <div class="title">J'ai besoin d'ajouter des commentaires dans mon code HTML, <br>
+                <div class="title">J'ai besoin d'ajouter des commentaires dans mon code HTML,
                     mais je ne me souviens plus de la syntaxe... 
-                    Peux-tu me rappeler ce que je dois mettre s'il te plait ?</div>
+                    Peux-tu me rappeler ce que je dois mettre s'il te plaît ?</div>
                 <ul class="choices">
                     <li>
                         <label
@@ -94,35 +110,36 @@
     <div class="modal-content">
         <span class="close">&times;</span>
                 <!-- <img class="monImage" src="images/MonImage.PNG"> -->
-                <div class="title">Voici mon code HTML: &#60img src="MonImage" alt="Illustration de mon image"&#62
+                <div class="title">Voici mon code HTML (clique sur le bouton pour voir le code): <br>    &#60img src="MonImage" alt="Illustration de mon image"&#62
                     J'essaie d'insérer une image mais ça ne marche pas.
-                    Quel est l'erreur ?</div>
+                    Quelle est l'erreur ?</div>
+                <button class="buttonQuestion" onclick="voirImageQuestion2()">Voir l'image</button>
                 <ul class="choices">
                     <li>
                         <label
                             ><input type="radio" id="reponseB1" name="question1" value="A" /><span
-                                >Réponse 1</span
+                                >L'image n'est pas placée dans le bon répertoire</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
                             ><input type="radio" id="reponseB2" name="question1" value="B" /><span
-                                >Réponse 2</span
+                                >Il manque l'extension de l'image dans l'attribut src</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
                             ><input type="radio" id="reponseB3" name="question1" value="C" /><span
-                                >Réponse 3</span
+                                >Il est nécessaire de supprimer les doubles quotes de l'attribut src</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
                             ><input type="radio" id="reponseB4" name="question1" value="D" /><span
-                                >Réponse 4</span
+                                >Cette balise ne permet pas d'insérer une image</span
                             ></label
                         >
                     </li>
@@ -140,18 +157,18 @@
                         (3,"Lucie","Fer","lucie.fer");<br>
                         (7,"Omer","Dalors","o.dalors");<br>
                         Quel est l'erreur ?</div>
-                <ul class="choices taille">
+                <ul class="choices taille"> 
                     <li>
                         <label
                             ><input type="radio" id="reponseC1" name="question1" value="A" /><span
-                                >Des simples côtes et des doubles côtes sont mélangés. Il faut chosir soit l'un soit l'autre</span
+                                >Des simples quotes et des doubles quotes sont mélangés. Il faut choisir soit l'un soit l'autre</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
                             ><input type="radio" id="reponseC2" name="question1" value="B" /><span
-                                >La base de données n'aiment pas les jeux de mots</span
+                                >La base de données n'aime pas les jeux de mots</span
                             ></label
                         >
                     </li>
@@ -176,33 +193,34 @@
 <div id="modalQuestion4" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-                <div class="title">Question 4</div>
+                <div class="title">Je n'affiche pas les données que j'ai saisies de mon formulaire, peux-tu y jeter un coup d'oeil s'il te plaît ?</div>
+                <button class="buttonQuestion" onclick="voirImageQuestion4()">Voir l'image</button>
                 <ul class="choices">
                     <li>
                         <label
                             ><input type="radio" id="reponseD1" name="question1" value="A" /><span
-                                >Réponse 1</span
+                                >Il manque la fonction session_start()</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
                             ><input type="radio" id="reponseD2" name="question1" value="B" /><span
-                                >Réponse 2</span
+                                    >Il faut utiliser la méthode PUT</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
                             ><input type="radio" id="reponseD3" name="question1" value="C" /><span
-                                >Réponse 3</span
+                                >Il faut englober le code dans une balise &#60?php ?></span
                             ></label
                         >
                     </li>
                     <li>
                         <label
                             ><input type="radio" id="reponseD4" name="question1" value="D" /><span
-                                >Réponse 4</span
+                                >Il faut désinstaller notepad++</span
                             ></label
                         >
                     </li>
@@ -212,4 +230,10 @@
 
 
 <!-- Bloc pour afficher l'avancée des réponses aux questions -->
-<span id="resultat" class="my-results">L'avancee des reponses aux questions seront ici</span>
+<span id="resultat" class="my-results">L'avancée des réponses aux questions sera affichée içi</span>
+
+
+<!-- Sound Effects -->
+<audio id="failed" src="sounds/failed.wav"></audio>
+<audio id="correct" src="sounds/correct.wav"></audio>
+<audio id="aboiement" src="sounds/chien_aboiement.wav"></audio>

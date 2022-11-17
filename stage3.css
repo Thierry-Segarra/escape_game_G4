@@ -1,10 +1,5 @@
-/* @font-face {
-    font-family: "Pixel";
-    src: url(Minecraft.ttf);
-} */
 *{
     font-family: 'VT323', monospace;
-
 }
 
 html {
@@ -12,19 +7,22 @@ html {
 }
 body {
     font-family: 'VT323', monospace;
+    overflow-x: hidden;
     padding: 1rem;
     background-color: #aaaaaa;
     background-image: url('images/sol_stage3.png');
     z-index: 1;
 }
 
+
+/* Décorations */
 .line{
     vertical-align: middle;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 450px;
-    margin-top: 10px;
+    margin-top: 35px;
     width: 100%;
 }
 
@@ -35,6 +33,17 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.chien{
+    position: absolute;
+    left: -100px;
+    z-index: -5;
+}
+.chien .image{
+    height: 50px;
+    transition-property: margin-left;
+    transition-duration: 10s;
 }
 
 .person{
@@ -60,6 +69,52 @@ body {
     height: 23%;
 }
 
+.tapisOurs {
+    background-image: url('images/tapis_ours.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 46%;
+    left: 42%;
+    width: 20%;
+    height: 30%;
+    z-index: -10;
+}
+
+.tapisRouge {
+    background-image: url('images/tapis_rouge.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    width: 20%;
+    height: 20%;
+    z-index: -100;
+}
+
+.robertCoffee {
+    background-image: url('images/robert_coffee.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    width: 5%;
+    height: 16%;
+}
+
+.tableCoffee {
+    background-image: url('images/table_coffee.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 75%;
+    left: 7%;
+    width: 20%;
+    height: 17%;
+}
+
 .plante1 {
     background-image: url('images/plante1.png');
     background-repeat: no-repeat;
@@ -69,6 +124,28 @@ body {
     left: 9%;
     width: 5%;
     height: 23%;
+}
+
+.plante2 {
+    background-image: url('images/plante2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 82%;
+    left: 87%;
+    width: 10%;
+    height: 15%;
+}
+
+.plante3 {
+    background-image: url('images/plante3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 70%;
+    left: 91%;
+    width: 15%;
+    height: 20%;
 }
 
 .deskaqua {
@@ -82,6 +159,16 @@ body {
     height: 23%;
 }
 
+.chefprojet {
+    background-image: url('images/chef_bad.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    width: 10%;
+    height: 27%;
+}
 
 /* Bouton validation */
 .red_button{
@@ -97,7 +184,6 @@ body {
     height: 60px;
     color: white;
     text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
-    z-index: 70;
 }
 .red_button:active{
     background-image: url('images/button_down.png');
@@ -123,6 +209,7 @@ body {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    overflow-x: hidden;
 }
 
 .modal-content {
@@ -131,7 +218,6 @@ body {
     background-size: contain;
     font-family: "Pixel";
     margin-left: 20%;    
-    /* margin-top: 4%; */
     padding: 20px;
     border-radius: 20px;
     width: 100%;
@@ -178,7 +264,7 @@ input[type="radio"] {
 
 .title {
     /* text-align: center; */
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     margin-left: 5%;
     margin-top: 2%;
@@ -199,7 +285,7 @@ input[type="radio"] {
     position: absolute;
     top: 60%;
     left: 70%;
-    padding: 1rem;
+    padding: 15px;
     cursor: pointer;
     font-size: inherit;
     color: white;
@@ -210,7 +296,20 @@ input[type="radio"] {
     position: absolute;
     font-family: "Pixel";
     top: 2%;
-    left: 37%;
+    left: 38%;
     padding: 1rem;
     border: 2px solid goldenrod;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.buttonQuestion {
+    margin-left: 28%;
+    margin-top: 1%;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+    padding: 10px;
 }

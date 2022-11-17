@@ -78,7 +78,7 @@ validation4.onclick = function() {
 
 
 //Liste des valeurs correctes du QCM
-var answers = ["A", "A", "A", "A"],
+var answers = ["reponseA3", "reponseB2", "reponseC4", "A"],
     totalAnswers = answers.length;
 
 //Pour calculer le nombre de questions auquelles le joueur a répondu correctement
@@ -86,30 +86,70 @@ var answersPlayer = 0;
 
 //Méthode qui va vérifier les bonnes réponses de chaque questionnaire
 function validquizz()  {
-    if (document.getElementById("reponseA1").checked) { 
-        alert ('Bonne réponse !'); 
-        btn1.src ="images/dude_1_happy.png";;
+    if (document.getElementById("reponseA3").checked) { 
+        btn1.src ="images/dude_1_happy.png";
+        document.getElementById("correct").play();
         answersPlayer++  
     }
-    if (document.getElementById("reponseB1").checked) { 
-        alert ('Bonne réponse !'); 
-        btn2.src ="images/dude_2_happy.png";; 
+    else if (document.getElementById("reponseA1").checked || document.getElementById("reponseA2").checked || document.getElementById("reponseA4").checked){
+        document.getElementById("failed").play();
+    }
+    if (document.getElementById("reponseB2").checked) { 
+        btn2.src ="images/dude_2_happy.png"; 
+        document.getElementById("correct").play();
         answersPlayer++ 
     }
-    if (document.getElementById("reponseC1").checked) { 
-        alert ('Bonne réponse !'); 
-        btn3.src ="images/dude_4_happy.png";;
+    else if (document.getElementById("reponseB1").checked || document.getElementById("reponseB3").checked || document.getElementById("reponseB4").checked){
+        document.getElementById("failed").play();
+    }
+    if (document.getElementById("reponseC4").checked) { 
+        btn3.src ="images/dude_4_happy.png";
+        document.getElementById("correct").play();
         answersPlayer++ 
     }
-    if (document.getElementById("reponseD1").checked) { 
-        alert ('Bonne réponse !'); 
-        btn4.src ="images/dude_5_happy.png";; 
+    else if (document.getElementById("reponseC1").checked || document.getElementById("reponseC2").checked || document.getElementById("reponseC3").checked){
+        document.getElementById("failed").play();
+    }
+    if (document.getElementById("reponseD1").checked) {  
+        btn4.src ="images/dude_5_happy.png";
+        document.getElementById("correct").play();
         answersPlayer++ 
     }
-    else {
-        //méthode pour enlever un coeur
+    else if (document.getElementById("reponseD2").checked || document.getElementById("reponseD3").checked || document.getElementById("reponseD4").checked){
+        document.getElementById("failed").play();
     }
 }
+
+
+//Animation pour le chien
+function ChienAnimation() {
+    document.getElementById("chien").style.marginLeft = "130vw";
+    document.getElementById("aboiement").play();
+}
+var image_chien = 1;
+initicialChien();
+function initicialChien(){
+    document.getElementById('initchien').innerHTML = '<img id="chien" class="image" src="images/chien1.png" alt="">';
+    setTimeout(() => {
+        setInterval(animationChien,100);
+        ChienAnimation()
+        setTimeout(() => {
+            initicialChien()
+            clearInterval(setInterval(animationChien,100));
+        }, 30000);
+    }, 10000);
+
+}
+
+function animationChien(){
+    if (image_chien >= 5) {
+        image_chien = 1;
+    }
+    document.getElementById('chien').src = 'images/chien'+image_chien+'.png';
+    image_chien++;
+
+}
+
 
 //Méthode qui retourne la valeur du score du joueur
 function returnScore() {
@@ -121,19 +161,11 @@ function returnScore() {
 }
 
 
-// PAS UTILISE POUR LE MOMENT
-
-//Méthode pour récupérer toutes les valeurs choisies par le joueur
-function getCheckedValue(radioName) {
-    var radios = document.getElementsByName(radioName);
-    for (var y = 0; y < radios.length; y++)
-        if (radios[y].checked) return radios[y].value;
+//Méthodes pour afficher les images que l'on retrouve dans les questions
+function voirImageQuestion2() {
+    window.open("images/imageQuestion2.PNG")     
 }
 
-//Méthode qui récupère le score du joueur
-function getScore() {
-    var score = 0;
-    for (var i = 0; i < totalAnswers; i++)
-        if (getCheckedValue("question" + i) === answers[i]) score += 1;
-    return score;
+function voirImageQuestion4() {
+    window.open("images/imageQuestion4.PNG")     
 }
