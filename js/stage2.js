@@ -35,7 +35,7 @@ function changeDocument(){
     for (var i = 0; i < item_elem.length; ++i) {
         var item = item_elem[i];  
         skin = randomIntFromInterval(1,6);
-        item.style.backgroundImage = "url(images/document_" + skin + ".png)"
+        item.style.backgroundImage = "url(../images/document_" + skin + ".png)"
     }
 }
 
@@ -119,7 +119,7 @@ document.addEventListener('mousemove', function(event) {
 // Verification des taches //
 
 function gameOver(){
-    document.getElementById("chef").src = "images/chef_good.png";
+    document.getElementById("chef").src = "../images/chef_good.png";
 }
 
 function verification(){

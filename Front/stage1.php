@@ -8,7 +8,9 @@
 include("../back/transition.php");
 ?>
 <script>
-  //textDinamique('textdinamique','text','voici le stage 1','<button class="bouton" onclick = "transitionOuver()">Au Boulot</button>'); // texte début
+    textDinamique('textdinamique','text',`Le projet ne doit pas tomber à l'eau !
+Vous êtes notre dernier espoir, reprenez en main le projet et menez le jusqu'à sa réussite !
+Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<button class="bouton" onclick = "transitionOuver()">Au boulot !</button>');
 </script>
 <body>
     <div class="sliding-background"></div>

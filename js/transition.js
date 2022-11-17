@@ -14,10 +14,6 @@ function transitionOuver() {
 var interval_text;
 var t = 0;
 
-textDinamique('textdinamique','text',`Le projet ne doit pas tomber à l'eau !
-Vous êtes notre dernier espoir, reprenez en main le projet et menez le jusqu'à sa réussite !
-Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<button class="bouton" onclick = "transitionOuver()">Au boulot !</button>');
-
 function textDinamique(div,bouton, text,suivant) {
 var nb_text = text.length;
 interval_text = setInterval(dinamique,50,div,nb_text,text,bouton,suivant);
