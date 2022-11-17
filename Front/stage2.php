@@ -98,7 +98,7 @@
                         <div class="item" id="item_10" onmouseenter="textTerminal('Realiser la charte graphique du jeu')"></div>
 
                         <div class="item" id="item_11" onmouseenter="textTerminal('Tester le systeme d indices')"></div>
-                        <div class="item" id="item_12" onmouseenter="textTerminal('Verifier la conformite des donnees à integrer')"></div>
+                        <div class="item" id="item_12" onmouseenter="textTerminal('Verifier la conformite des donnees a integrer')"></div>
                     </div>
                 </div>
             </div>

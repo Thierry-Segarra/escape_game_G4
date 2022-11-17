@@ -384,7 +384,7 @@ function verifier(){
   if(inputVerif == code){
     let text = `Surprenant ! La phase de cadrage ne vous a pas vu venir.
     Sans ces livrables, le projet se dirigerait droit dans le mur !`;
-    let suivant = "stage_2.php";
+    let suivant = "stage2.php";
     transitionFermer(text,suivant);
   }
 }
