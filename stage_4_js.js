@@ -68,7 +68,7 @@
     }
 
     function afficherMorce() {
-        if(mots1 == true && mots2 == true && mots3 == true && mots4 == true){document.getElementById('morse').innerHTML = "<span> 0 = — — — — — </span><br><span> 1 = • — — — — </span><br><span> 2 = • • — — — </span><br><span> 3 = • • • — — </span><br><span> 4 = • • • • — </span><br><span> 5 = • • • • • </span><br>";}
+        if(mots1 == true && mots2 == true && mots3 == true && mots4 == true){document.getElementById('morse').innerHTML = "<span> 0 = — — — — — </span><span> 1 = • — — — — </span><span> 2 = • • — — — </span><span> 3 = • • • — — </span><span> 4 = • • • • — </span><span> 5 = • • • • • </span>";}
     }
 
 
