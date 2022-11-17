@@ -44,16 +44,16 @@ function changeDocument(){
 function distribution(){
     attribut = ["FRONT1","FRONT2","BACK1","BACK2","DESIGNER","CONTROLE"];
 
-    texte = ["Moi c'est Jacques HADIL, developpeur FRONT. N'hesite pas a me donner du travail !",
+    texte = ["Jacques HADIL, developpeur FRONT. N'hesite pas a me donner du travail!",
             "Salut, Alex de la famille TERIEUR. Mon grand frere est developper BACK.",
             "Bonjour ! Jean MENNUI de l'equipe de developpeur BACK. On n'a rien a faire?",
             "Alain de la famille TERIEUR. Mon petit-frere est developpeur FRONT!",
-            "Je suis designer graphique, Adam TROIJOUR a votre service !",
-            "On est pas en retard ? Quel est le boulot ? Ah oui, Axel ERE du pole controle qualite."]
+            "Je suis designer graphique, Adam TROIJOUR a votre service!",
+            "On est pas en retard ? Ah oui. Bonjour, Axel ERE du pole controle qualite."]
 
     shuffle(attribut,texte); //melanger la table attribut
-    console.log(attribut);
-    console.log(texte);
+    //console.log(attribut);
+    //console.log(texte);
 
     var box_elem = document.getElementsByClassName('box');
     for (var i = 0; i < box_elem.length; ++i) {
@@ -66,13 +66,13 @@ function distribution(){
         document.getElementById('bubble_' + i).innerHTML = texte.shift(); //rajouter la premiere valeur d'attribut et l'enlever de la table
     }
 
-    console.log(attribut);
-    console.log(texte);
+    //console.log(attribut);
+    //console.log(texte);
 }
 
 function load(){
-    changeDocument();
     distribution();
+    changeDocument();
 }
 
 
@@ -84,6 +84,7 @@ document.addEventListener('mousedown', function(e) {
         div = document.elementFromPoint(e.clientX, e.clientY)
         div.style.zIndex = 0;
         div.style.position = "absolute";
+        document.getElementById("audio_select").play();
     }
 }, true);
 
@@ -96,6 +97,8 @@ document.addEventListener('mouseup', function(e) {
         box.prepend(div);
         div.style.position = "static";
         div = null;
+        document.getElementById("audio_down").play();
+        
     }
 }, true);
 
@@ -152,6 +155,7 @@ function verification(){
     if ((FRONT1.childElementCount === 2) && (FRONT1.contains(item_1) || FRONT1.contains(item_2) || FRONT1.contains(item_3) || FRONT1.contains(item_4))){
         FRONT1.style.border = "solid 3px green";
         partie_front_1 = true;
+        document.getElementById("audio_validation").play();
     }else{
         FRONT1.style.border = "dashed 2px rgb(37, 37, 37)";
         partie_front_1 = false;
@@ -160,6 +164,7 @@ function verification(){
     if ((FRONT2.childElementCount === 2) && (FRONT2.contains(item_1) || FRONT2.contains(item_2) || FRONT2.contains(item_3) || FRONT2.contains(item_4))){
         FRONT2.style.border = "solid 3px green";
         partie_front_2 = true;
+        document.getElementById("audio_validation").play();
     }else{
         FRONT2.style.border = "dashed 2px rgb(37, 37, 37)";
         partie_front_2 = false;
@@ -168,6 +173,7 @@ function verification(){
     if ((BACK1.childElementCount === 2) && (BACK1.contains(item_5) || BACK1.contains(item_6) || BACK1.contains(item_7) || BACK1.contains(item_8))){
         BACK1.style.border = "solid 3px green";
         partie_back_1 = true;
+        document.getElementById("audio_validation").play();
     }else{
         BACK1.style.border = "dashed 2px rgb(37, 37, 37)";
         partie_back_1 = false;
@@ -176,6 +182,7 @@ function verification(){
     if ((BACK2.childElementCount === 2) && (BACK2.contains(item_5) || BACK2.contains(item_6) || BACK2.contains(item_7) || BACK2.contains(item_8))){
         BACK2.style.border = "solid 3px green";
         partie_back_2 = true;
+        document.getElementById("audio_validation").play();
     }else{
         BACK2.style.border = "dashed 2px rgb(37, 37, 37)";
         partie_back_2 = false;
@@ -184,6 +191,7 @@ function verification(){
     if ((DESIGNER.childElementCount === 2) && (DESIGNER.contains(item_9) || DESIGNER.contains(item_10))){
         DESIGNER.style.border = "solid 3px green";
         partie_designer = true;
+        document.getElementById("audio_validation").play();
     }else{
         DESIGNER.style.border = "dashed 2px rgb(37, 37, 37)";
         partie_designer = false;
@@ -192,6 +200,7 @@ function verification(){
     if ((CONTROLE.childElementCount === 2) && (CONTROLE.contains(item_11) || CONTROLE.contains(item_12))){
         CONTROLE.style.border = "solid 3px green";
         partie_controle = true;
+        document.getElementById("audio_validation").play();
     }else{
         CONTROLE.style.border = "dashed 2px rgb(37, 37, 37)";
         partie_controle = false;
