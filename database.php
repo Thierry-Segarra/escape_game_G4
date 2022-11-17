@@ -1,15 +1,7 @@
 <?php
-
-    try{
-        $pdo = new PDO("mysql:host=localhost;dbname=escape_game_g4;charset=utf8;", "root","root");
-    }
-    catch(Exception $e){
-        die('Erreur:'.$e->getMessage());
-    }
-
-    $userInfo = $pdo->prepare('SELECT * FROM user ORDER BY time ASC LIMIT 5');
-
-    $userInfo->execute();
-    $users = $userInfo->fetchAll();
-
+$db_username = 'root';
+$db_password = '';
+$db_name     = 'escape_game_g4';// verifier ici le nom de la base de donnée
+$db_host     = 'localhost';
+$db = mysqli_connect($db_host, $db_username, $db_password,$db_name) or die('could not connect to database');
 ?>
