@@ -50,7 +50,7 @@
 }
 
 .madame {
-  background-image: url("Images/madame.png");
+  background-image: url("../Images/madame.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 45%;

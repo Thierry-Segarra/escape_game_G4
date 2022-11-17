@@ -20,17 +20,14 @@ Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<butt
 
 function textDinamique(div,bouton, text,suivant) {
 var nb_text = text.length;
-interval_text = setInterval(dinamique,10,div,nb_text,text,bouton,suivant);
+interval_text = setInterval(dinamique,50,div,nb_text,text,bouton,suivant);
 } 
 
 function dinamique(div,nb_text,text,bouton,suivant){
-console.log(div,nb_text,t);
 if ( t < nb_text)
 {
-  console.log(text.substring(t,t+1));
   let lettre = text.substring(t,t+1);
   t = t +1;
-  console.log(lettre);
   document.getElementById(div).innerHTML = document.getElementById(div).innerHTML + lettre;
   
 }else{

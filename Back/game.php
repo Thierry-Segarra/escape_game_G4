@@ -49,7 +49,7 @@ var image_mur = document.getElementById("source1");
 var nb_dossier_image = 1;
 
 
-fetch("objet.json")
+fetch("../js/objet.json")
 .then(response => response.json())
 .then(data =>{
     console.log(data)
@@ -190,7 +190,7 @@ function collisionDetectionEND() {
       if(endStatus == 1 && lockendStatus == false) {
         if(paddleX+playerSize > canvas.width - endSize && paddleX < canvas.width && paddleY+playerSize > canvas.height - endSize && paddleY < canvas.height) {
           lockendStatus = true;
-          document.getElementById("inputnb").innerHTML ='<input type="number" id="inputVerif" min="0" max="9999"></input><button onclick="verifier()">valider code</button>';
+          document.getElementById("inputnb").innerHTML ='<input class="number" type="number" id="inputVerif" min="0" max="9999"></input><button class="validation" onclick="verifier()">valider code</button>';
         }
       }
   }
@@ -305,8 +305,8 @@ function draw() {
   y += dy;
   requestAnimationFrame(draw);
 }
+setInterval(draw(),100)
 
-draw();
 
 function right(mur,paddleX,paddleY,playerSize){
   var lock = false;
@@ -382,7 +382,7 @@ function verifier(){
   
   console.log(inputVerif);
   if(inputVerif == code){
-    transitionFermer('Bravo tu as fini le stage 1','stage_1.php');
+    //document.location.href="game.php"; 
   }
 }
 
@@ -410,7 +410,7 @@ function animation_mouve(move, lock){
         lock_move_down = false;
         clearInterval(animation_move_image);
         nb_image = 1;
-        document.getElementById("source").src = 'image/left1.png';
+        document.getElementById("source").src = '../images/left1.png';
         animation_move_image = setInterval(animation_player_move, 100, 'left');
       }
       
@@ -424,7 +424,7 @@ function animation_mouve(move, lock){
         lock_move_down = false;
         clearInterval(animation_move_image);
         nb_image = 2;
-        document.getElementById("source").src = 'image/right1.png';
+        document.getElementById("source").src = '../images/right1.png';
         animation_move_image = setInterval(animation_player_move, 100, 'right');
       }
 
@@ -436,7 +436,7 @@ function animation_mouve(move, lock){
         lock_move_down = false;
         clearInterval(animation_move_image);
         nb_image = 2;
-        document.getElementById("source").src = 'image/up1.png';
+        document.getElementById("source").src = '../images/up1.png';
         animation_move_image = setInterval(animation_player_move, 100, 'up');
       }
     }else if (move == 'down') {
@@ -447,7 +447,7 @@ function animation_mouve(move, lock){
         lock_move_down = true;
         clearInterval(animation_move_image);
         nb_image = 2;
-        document.getElementById("source").src = 'image/down1.png';
+        document.getElementById("source").src = '../images/down1.png';
         animation_move_image = setInterval(animation_player_move, 100, 'down');
       }
     }
@@ -470,16 +470,16 @@ function animation_player_move(direction){
     nb_image = 1;
   }
   if(direction == 'left'){
-    document.getElementById("source").src = 'image/left'+nb_image+'.png';
+    document.getElementById("source").src = '../images/left'+nb_image+'.png';
     nb_image++;
   }else if(direction == 'right'){
-    document.getElementById("source").src = 'image/right'+nb_image+'.png';
+    document.getElementById("source").src = '../images/right'+nb_image+'.png';
     nb_image++;
   }else if(direction == 'up'){
-    document.getElementById("source").src = 'image/up'+nb_image+'.png';
+    document.getElementById("source").src = '../images/up'+nb_image+'.png';
     nb_image++;
   }else if(direction == 'down'){
-    document.getElementById("source").src = 'image/down'+nb_image+'.png';
+    document.getElementById("source").src = '../images/down'+nb_image+'.png';
     nb_image++;
   }
   
@@ -488,7 +488,7 @@ function animation_player_move(direction){
 
 function image_doc(id){
   let nb_image = Math.floor(Math.random() * (3) + 1);
-  document.getElementById("doc"+id).src = 'image/document_'+nb_image+'.png';
+  document.getElementById("doc"+id).src = '../images/document_'+nb_image+'.png';
   let image_doc = document.getElementById("doc"+id);
   nb_dossier_image++;
   return image_doc; 

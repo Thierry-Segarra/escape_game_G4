@@ -34,13 +34,13 @@ require('database.php');
                     <img src="Images/coeur.png" style="width: 90px;">
                 </div>
                 <div class="pseudo">
-                    <input class="valider" type="submit" value="Jouer">
+                    <a class="valider" href="Front/stage1.php">Jouer</a>
                 </div>
 
                 <div class="tab_score">
                     <div>Classement</div>
                     <?php
-                    $requete = "SELECT * FROM user Order By time DESC";
+                    $requete = "SELECT * FROM user Order By time DESC Limit 5";
                     $exec_requete = mysqli_query($db, $requete);
                     while ($row = mysqli_fetch_assoc($exec_requete)) { ?>
                         <div>
