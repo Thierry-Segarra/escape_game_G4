@@ -1,11 +1,11 @@
 .box_transmition {
   position: absolute;
   z-index: 10000;
-  top: -10px;
+  top: -50px;
   left: 0px;
   margin-left: -100px;
-  height: 110%;
-  width: 110%;
+  height: 110vh;
+  width: 110vw;
   background-color: black;
   transition-property: margin-left;
   transition-duration: 3s;
