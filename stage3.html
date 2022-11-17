@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stage3.css">
+    <title>Stage 3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script type="text/javascript" src="stage3.js" defer></script>
+
+
+<!-- Bouton VALIDER -->
+<div class="red_button" onclick="returnScore()">
+    <div class="red_button_text">VALIDER</div>
+</div>
+
+<!-- Elements de décor -->
+<div class="fontaine_eau"></div>
+
+<div class="plante1"></div>
+
+<div class="deskaqua"></div>
+
+<!-- FRONT élèves avec bureau -->
+<div class="line">
+    <img class="person" id="btnStudent1" src="images/dude_1_angry.png">
+    <img class="person" id="btnStudent2" src="images/dude_3_angry.png">
+</div>
+
+<div class="line">
+    <img class="person" src="images/dude_4_happy.png">
+    <img class="person" id="btnStudent3" src="images/dude_5_angry.png">
+</div>
+
+<div class="line">
+    <img class="person" id="btnStudent4" src="images/dude_6_angry.png">
+    <img class="person" src="images/dude_2_happy.png">
+</div>
+
+
+<!-- Modal -->
+<div id="modalQuestion1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+            <div class="reponse_test">
+                <div class="title">J'ai besoin d'ajouter des commentaires dans mon code HTML, <br>
+                    mais je ne me souviens plus de la syntaxe... 
+                    Peux-tu me rappeler ce que je dois mettre s'il te plait ?</div>
+                <ul class="choices">
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseA1" name="question1" value="A" /><span
+                                >#</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseA2" name="question1" value="B" /><span
+                                >/*  */</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseA3" name="question1" value="C" /><span
+                                >&#60!--   --></span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseA4" name="question1" value="D" /><span
+                                >//</span
+                            ></label
+                        >
+                    </li>
+                </ul>
+            <button class="validation" onclick="validquizz()">Valider</button>
+        </div>
+    </div>
+</div>
+<div id="modalQuestion2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+                <img class="monImage" src="images/MonImage.PNG">
+                <div class="title">Voici mon code HTML: &#60img src="MonImage" alt="Illustration de mon image"&#62
+                    J'essaie d'insérer une image mais ça ne marche pas.
+                    Quel est l'erreur ?</div>
+                <ul class="choices">
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseB1" name="question1" value="A" /><span
+                                >Réponse 1</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseB2" name="question1" value="B" /><span
+                                >Réponse 2</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseB3" name="question1" value="C" /><span
+                                >Réponse 3</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseB4" name="question1" value="D" /><span
+                                >Réponse 4</span
+                            ></label
+                        >
+                    </li>
+                </ul>
+        <button class="validation" onclick="validquizz()">Valider</button>
+    </div>
+</div>
+<div id="modalQuestion3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+                <div class="title">J'essaie d'insérer des données dans ma base de donnée mais ça ne marche pas ! Voici ma requête SQL : <br><br>
+                    INSERT INTO UTILISATEURS (id, nom, prenom, login) VALUES<br>
+                        (1,"Jacques","Sonne","j.sonne");<br>
+                        (2,'Jean','Bambois','j.bambois');<br>
+                        (3,"Lucie","Fer","lucie.fer");<br>
+                        (7,"Omer","Dalors","o.dalors");<br>
+                        Quel est l'erreur ?</div>
+                <ul class="choices">
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseC1" name="question1" value="A" /><span
+                                >Des simples côtes et des doubles côtes sont mélangés. Il faut chosir soit l'un soit l'autre</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseC2" name="question1" value="B" /><span
+                                >La base de données n'aiment pas les jeux de mots</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseC3" name="question1" value="C" /><span
+                                >Les IDs ne sont pas tous à la suite </span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseC4" name="question1" value="D" /><span
+                                >Il y a des points-virgules à la fin de chaque ligne à insérer</span
+                            ></label
+                        >
+                    </li>
+                </ul>
+        <button class="validation" onclick="validquizz()">Valider</button>
+    </div>
+</div>
+<div id="modalQuestion4" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+                <div class="title">Question 4</div>
+                <ul class="choices">
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseD1" name="question1" value="A" /><span
+                                >Réponse 1</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseD2" name="question1" value="B" /><span
+                                >Réponse 2</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseD3" name="question1" value="C" /><span
+                                >Réponse 3</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" id="reponseD4" name="question1" value="D" /><span
+                                >Réponse 4</span
+                            ></label
+                        >
+                    </li>
+        <button class="validation" onclick="validquizz()">Valider</button>
+    </div>
+</div>
+
+
+<!-- Bloc pour afficher l'avancée des réponses aux questions -->
+<span id="resultat" class="my-results">L'avancee des reponses aux questions seront ici</span>
