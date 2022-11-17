@@ -248,6 +248,8 @@ function drawdossier() {
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         ctx.fillStyle = ctx.createPattern(image_mur, "repeat");
+        ctx.shadowColor = "black";
+        ctx.shadowBlur = 15;
         ctx.fill();
         ctx.closePath();
     }

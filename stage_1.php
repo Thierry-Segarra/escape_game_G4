@@ -34,6 +34,4 @@
 </div>
 <div id="inputnb"></div>
 
-
-
 <?php include("game.php") ?>
