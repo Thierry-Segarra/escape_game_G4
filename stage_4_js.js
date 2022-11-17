@@ -33,7 +33,7 @@
             if(mots1 == false){
                 reponse_mots = mots+'<br>';
                 mots1 = true;
-                document.getElementById('couleur1').style.backgroundColor = 'red';
+                document.getElementById('couleur1').style.color = 'red';
                 
             }
             console.log(reponse_mots);
@@ -42,7 +42,7 @@
             if(mots2 == false){
                 reponse_mots = mots+'<br>';
                 mots2 = true;
-                document.getElementById('couleur2').style.backgroundColor = 'blue';
+                document.getElementById('couleur2').style.color = 'blue';
             }
             console.log(reponse_mots);
             break;
@@ -50,7 +50,7 @@
             if(mots3 == false){
                 reponse_mots = mots+'<br>';
                 mots3 = true;
-                document.getElementById('couleur3').style.backgroundColor = 'green';
+                document.getElementById('couleur3').style.color = 'green';
             }
             console.log(reponse_mots);
             break;
@@ -58,7 +58,7 @@
             if(mots4 == false){
                 reponse_mots = mots+'<br>';
                 mots4 = true;
-                document.getElementById('couleur4').style.backgroundColor = 'yellow'
+                document.getElementById('couleur4').style.color = 'yellow'
             }
             console.log(reponse_mots);
             break;
@@ -80,23 +80,23 @@
         switch (nb) {
         case 1:
             console.log('1');
-            if(lock_1 == false){clearInterval(lock1);lock_1 = true;document.getElementById('nb1_1').innerHTML = "Débloquer";verif_lock_nb()}
-            else{lock1 = setInterval(changernb, 1000,1);document.getElementById('nb1_1').innerHTML = "Bloquer";lock_1 = false;}
+            if(lock_1 == false){clearInterval(lock1);lock_1 = true;document.getElementById('nb1_1').style.backgroundImage = "url(images/redbutton.png)";verif_lock_nb()}
+            else{lock1 = setInterval(changernb, 1000,1);document.getElementById('nb1_1').style.backgroundImage = "url(images/greenbutton.png)";lock_1 = false;}
             break;
         case 2:
             console.log('2');
-            if(lock_2 == false){clearInterval(lock2);lock_2 = true;document.getElementById('nb2_2').innerHTML = "Débloquer";verif_lock_nb()}
-            else{lock2 = setInterval(changernb, 1000,2);document.getElementById('nb2_2').innerHTML = "Bloquer";lock_2 = false;}
+            if(lock_2 == false){clearInterval(lock2);lock_2 = true;document.getElementById('nb2_2').style.backgroundImage = "url(images/redbutton.png)";verif_lock_nb()}
+            else{lock2 = setInterval(changernb, 1000,2);document.getElementById('nb2_2').style.backgroundImage = "url(images/greenbutton.png)";lock_2 = false;}
             break;
         case 3:
             console.log('3');
-            if(lock_3 == false){clearInterval(lock3);lock_3 = true;document.getElementById('nb3_3').innerHTML = "Débloquer";verif_lock_nb()}
-            else{lock3 = setInterval(changernb, 1000,3);document.getElementById('nb3_3').innerHTML = "Bloquer";lock_3 = false;}
+            if(lock_3 == false){clearInterval(lock3);lock_3 = true;document.getElementById('nb3_3').style.backgroundImage = "url(images/redbutton.png)";verif_lock_nb()}
+            else{lock3 = setInterval(changernb, 1000,3);document.getElementById('nb3_3').style.backgroundImage = "url(images/greenbutton.png)";lock_3 = false;}
             break;
         case 4:
             console.log('4');
-            if(lock_4 == false){clearInterval(lock4);lock_4 = true;document.getElementById('nb4_4').innerHTML = "Débloquer";verif_lock_nb()}
-            else{lock4 = setInterval(changernb, 1000,4);document.getElementById('nb4_4').innerHTML = "Bloquer";lock_4 = false;}
+            if(lock_4 == false){clearInterval(lock4);lock_4 = true;document.getElementById('nb4_4').style.backgroundImage = "url(images/redbutton.png)";verif_lock_nb()}
+            else{lock4 = setInterval(changernb, 1000,4);document.getElementById('nb4_4').style.backgroundImage = "url(images/greenbutton.png)";lock_4 = false;}
             break;
         }
     }
