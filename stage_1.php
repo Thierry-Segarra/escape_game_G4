@@ -4,7 +4,12 @@
     <link rel="stylesheet" href="stage_1.css">
     <title>Stage 1</title>
 </head>
-
+<?php
+include("transition.php");
+?>
+<script>
+  //textDinamique('textdinamique','text','voici le stage 1','<button class="bouton" onclick = "transitionOuver()">Au Boulot</button>'); // texte début
+</script>
 <canvas id="canvas" class="canvas">
 </canvas>
 <img id="source" src="image/down1.png"width="8" height="8">
@@ -34,4 +39,7 @@
 </div>
 <div id="inputnb"></div>
 
-<?php include("game.php") ?>
+
+
+<?php 
+include("game.php") ?>

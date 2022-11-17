@@ -382,7 +382,7 @@ function verifier(){
   
   console.log(inputVerif);
   if(inputVerif == code){
-    document.location.href="game.php"; 
+    transitionFermer('Bravo tu as fini le stage 1','stage_1.php');
   }
 }
 

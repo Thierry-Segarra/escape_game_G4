@@ -1,9 +1,8 @@
-function transitionFermer() {
+function transitionFermer(text,lien) {
   document.getElementById("transition").style.marginLeft = "-100px";
   document.getElementById("text").innerHTML = '<textarea class="area" id="textdinamique" disabled></textarea>';
   let div = 'textdinamique';
-  let text = 'Bravo tu as fini le stage 1';
-  let suivant = '<a class="bouton" href="stage_2.php">Au Boulot</a>';
+  let suivant = '<a class="bouton" href="'+lien+'">Au Boulot</a>';
   let bouton = 'text';
   setTimeout(textDinamique,3000,div,bouton, text,suivant)
 }
@@ -13,7 +12,7 @@ function transitionOuver() {
 var interval_text;
 var t = 0;
 
-textDinamique('textdinamique','text','voici le stage 1','<button class="bouton" onclick = "transitionOuver()">Au Boulot</button>');
+
 
 function textDinamique(div,bouton, text,suivant) {
 var nb_text = text.length;
