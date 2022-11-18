@@ -41,30 +41,27 @@
     {
         error++;
         if (error === 1 ) {
-            vie_one.src = "./assets/coeur_vide.png"
+            vie_one.src = "../images/coeur_vide.png"
         } else if (error === 2 ) {
-            vie_two.src = "./assets/coeur_vide.png"
+            vie_two.src = "../images/coeur_vide.png"
         } else if (error === 3 ) {
-            vie_three.src = "./assets/coeur_vide.png"
+            vie_three.src = "../images/coeur_vide.png"
             document.location.href="../Front/gameover.html";
         }
     }
 
+    var btn_start, btn_stop, s = 0,mn = 0;
     /** TIMER **/
     window.onload = function()
     {
-        sp = document.getElementsByTagName('span');
-        btn_start = document.getElementById('start');
-        btn_stop = document.getElementById('stop');
-        s = 0, mn = 0;
         if (localStorage != null) {
-            temps2 = localStorage.getItem('temps')
-            temps3 = temps2.split(":")
-            mn = parseInt(temps3[0])
-            s = parseInt(temps3[1])
-            sp[0].innerHTML = mn + "min";
-            sp[1].innerHTML = s + "sec";
-            localStorage.clear('temps')
+            temps2 = localStorage.getItem('temps');
+            temps3 = temps2.split(":");
+            mn = parseInt(temps3[0]);
+            s = parseInt(temps3[1]);
+            document.getElementById('min_times').innerHTML = mn + "min";
+            document.getElementById('sec').innerHTML = s + "sec";
+            localStorage.clear('temps');
         }
     }
 
@@ -75,23 +72,23 @@
             s = 0;
             mn += 1
         }
-        sp[0].innerHTML = mn + "min";
-        sp[1].innerHTML = s + "sec";
+        document.getElementById('min_times').innerHTML = mn + "min";
+        document.getElementById('sec').innerHTML = s + "sec";
     }
+
+    var t;
 
     function start()
     {
-        t = setInterval(update_chrono, 100);
-        btn_start.disabled = true
+        t = setInterval(update_chrono, 1000);
     }
     function stop()
     {
-        min = sp[0].innerHTML.split("m");
+        min = document.getElementById('min_times').innerHTML.split("m");
         minutes = min[0]
-        sec = sp[1].innerHTML.split("s");
+        sec = document.getElementById('sec').innerHTML.split("s");
         secondes = sec[0]
         temps = `${minutes}:${secondes}`
         clearInterval(t);
-        btn_start.disabled = false
         localStorage.setItem('temps', temps)
     }

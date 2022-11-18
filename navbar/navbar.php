@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./navbar.css">
-    <link rel="stylesheet" href="../styles/navbar_1.css">
-    <link rel="stylesheet" href="../styles/page_fin_1.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../Styles/navbar_1.css">
     
     <title>NAVBAR</title>
 </head>
 <body>
    
     <nav class="main navbar" id='nav'>
-    <canvas width="100" height="100" class='navbar-canvas' id="navbar-grid"></canvas>
+    <canvas id="canvas_nav" width="100" height="100" class='navbar-canvas' id="navbar-grid"></canvas>
     
     <logo>
             <logo-inner>
@@ -27,13 +26,13 @@
         <!-- Coeurs de vie (gauche) -->
         <div class="vies">
             <div class="vie">
-                <img id="vie_one" src="./assets/coeur.png" alt="">
+                <img id="vie_one" src="../images/coeur.png" alt="">
             </div>
             <div class="vie">
-                <img id="vie_two" src="./assets/coeur.png" alt="">
+                <img id="vie_two" src="../images/coeur.png" alt="">
             </div>
             <div class="vie">
-                <img id="vie_three" src="./assets/coeur.png" alt="">
+                <img id="vie_three" src="../images/coeur.png" alt="">
             </div>
         </div>
 
@@ -41,8 +40,8 @@
         <div class="timer">
             <div class="chronometre">
                 <div class="time">
-                    <span>00 min</span>:
-                    <span>00 sec</span>
+                    <span id="min_times">00 min</span>:
+                    <span id="sec">00 sec</span>
                 </div>
                 <!-- <div class="controls">
                     <button id="start" onclick="start()">Start</button>
@@ -60,9 +59,9 @@
         <!-- Indice (droite) -->
   
             <!-- Ouverture modale indice -->
-            <div id="id01" class="modal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
+            <div id="id01" class="modal_indice">
+                <div class="modal-dialo">
+                    <div class="modal-conten">
                         <div > 
                             <a href="#" class="closebtn">×</a>
                             <div id="ask_indice">
@@ -83,7 +82,7 @@
         </div>
     </nav>
 
-    <script src="./navbar.js">       
+    <script src="../navbar/navbar.js">       
     </script>
     
 </body>

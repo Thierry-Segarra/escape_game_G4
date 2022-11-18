@@ -15,11 +15,10 @@
     margin: auto;
     transform:scaleX(-1);
     width:67%;
-    margin-left:84%;
 }
 
 .vie img {
-    width: 100%;
+    width: 80%;
 }
 
 .timer {
@@ -51,31 +50,31 @@ div#texte_indice {
 }
 
 /* Foncer l'arrière-plan de la fenêtre modale */
-.modal {
+.modal_indice {
   display: none; 
-  left: 0;
+  left: -10px;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 101.5%;
+  height: 100vh;
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-}
+  z-index: 10;}
 
 /* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien supprimer */
-.modal:target {
+.modal_indice:target {
   display: table;
   position: absolute;
 }
 
 /* la fenêtre modale  */
-.modal-dialog {
+.modal_indice .modal-dialo {
   display: table-cell;
   vertical-align: middle;
 }
 
 /* Le contenu de la modale */
-.modal-dialog .modal-content {
+.modal_indice .modal-dialo .modal-conten {
   margin: auto;
   background-color: #f3f3f3;
   position: relative;
@@ -95,7 +94,6 @@ div#texte_indice {
 .closebtn {
   text-decoration: none;
   float: right;
-  margin-top:-3%;
   padding:10px;
   font-size: 35px;
   font-weight: bold;

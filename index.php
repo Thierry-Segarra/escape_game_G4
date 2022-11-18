@@ -14,13 +14,13 @@ require('database.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
     <title>Escape Game</title>
 </head>
 
 
 
 <body>
-    <audio id="ecranTitre" src="sounds/ecran_titre.wav" autoplay loop ></audio>
     <div class="container">
         <div class="sky">
 
@@ -40,7 +40,7 @@ require('database.php');
                 <div class="tab_score">
                     <div>Classement</div>
                     <?php
-                    $requete = "SELECT * FROM user Order By time DESC Limit 5";
+                    $requete = "SELECT * FROM user Order By time Limit 5";
                     $exec_requete = mysqli_query($db, $requete);
                     while ($row = mysqli_fetch_assoc($exec_requete)) { ?>
                         <div>
@@ -56,11 +56,6 @@ require('database.php');
         </div>
     </div>
 </body>
-
-<script type="text/javascript">
-        var audio = document.getElementById('ecranTitre');
-        audio.volume = 0.8;
-</script>
 
 <footer>
 

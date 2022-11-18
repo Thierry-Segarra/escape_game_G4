@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #111;
-  margin: 0;
-  overflow: hidden;
-}
-
 button {
   background: transparent;
   outline: none;
@@ -21,20 +15,21 @@ button {
 
 .navbar {
   position: absolute;
-  width: 100%;
+  width: 101.5%;
   height: 120px;
   background-color: #151515;
   overflow: hidden;
   cursor: crosshair;
   z-index: 2;
   top: -100px;
+  left: -10px;
 }
 .navbar:hover{
-  top:0px;
+  top:-10px;
 }
-canvas {
+.canvas_nav {
   position: absolute;
-  width: 100%;
+  width: 10%;
   height: 100%;
 }
 

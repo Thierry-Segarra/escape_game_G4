@@ -7,11 +7,12 @@ html {
 }
 body {
     font-family: 'VT323', monospace;
-    overflow-x: hidden;
+    overflow: hidden;
     padding: 1rem;
     background-color: #aaaaaa;
     background-image: url('../images/sol_stage3.png');
     z-index: 1;
+    
 }
 
 

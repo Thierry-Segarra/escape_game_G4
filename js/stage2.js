@@ -163,7 +163,7 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         FRONT1.style.border = "dashed 2px rgb(37, 37, 37)";
-        FRONT1.style.borderRight = "solid 20px green";
+        FRONT1.style.border = "border: right 5px green";
         partie_front_1 = false;
     }
 
@@ -173,7 +173,6 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         FRONT2.style.border = "dashed 2px rgb(37, 37, 37)";
-        FRONT2.style.borderRight = "solid 20px green";
         partie_front_2 = false;
     }
 
@@ -183,7 +182,6 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         BACK1.style.border = "dashed 2px rgb(37, 37, 37)";
-        BACK1.style.borderRight = "solid 20px green";
         partie_back_1 = false;
     }
 
@@ -193,7 +191,6 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         BACK2.style.border = "dashed 2px rgb(37, 37, 37)";
-        BACK2.style.borderRight = "solid 20px green";
         partie_back_2 = false;
     }
 
@@ -203,7 +200,6 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         DESIGNER.style.border = "dashed 2px rgb(37, 37, 37)";
-        DESIGNER.style.borderRight = "solid 20px green";
         partie_designer = false;
     }
 
@@ -213,7 +209,6 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         CONTROLE.style.border = "dashed 2px rgb(37, 37, 37)";
-        CONTROLE.style.borderRight = "solid 20px green";
         partie_controle = false;
     }
 

@@ -6,6 +6,7 @@
 </head>
 <?php
 include("../Back/transition.php");
+include("../navbar/navbar.php");
 ?>
 <script>
     textDinamique('textdinamique','text',`Le projet ne doit pas tomber à l'eau !
@@ -15,7 +16,9 @@ Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<butt
 <body>
     <audio id="soundStage1" src="../sounds/stage1.wav" autoplay loop ></audio>
     <div class="sliding-background"></div>
+    <div class="canva_bord">
     <canvas id="canvas" class="canvas"></canvas>
+    </div>
 
     <div class="hidden">
         <img id="source" src="../images/down1.png"width="8" height="8">

@@ -14,6 +14,7 @@
 <body>
 <?php
     include("../Back/transition.php");
+    include("../navbar/navbar.php");
     ?>
     <script>
         textDinamique('textdinamique','text',`Le produit est en cours de développement.

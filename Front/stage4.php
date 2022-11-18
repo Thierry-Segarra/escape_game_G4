@@ -7,6 +7,7 @@
     </head>
     <?php
     include("../Back/transition.php");
+    include("../navbar/navbar.php");
     ?>
     <script>
         textDinamique('textdinamique','text',`Nous arrivons à l'heure du bilan.

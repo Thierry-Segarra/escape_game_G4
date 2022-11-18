@@ -9,6 +9,7 @@
 
     <?php
     include("../Back/transition.php");
+    include("../navbar/navbar.php");
     ?>
     <script>
         textDinamique('textdinamique','text',`Je vous présente votre équipe.

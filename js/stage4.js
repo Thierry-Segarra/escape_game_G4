@@ -61,7 +61,7 @@
             if(mots4 == false){
                 reponse_mots = mots+'<br>';
                 mots4 = true;
-                document.getElementById('couleur4').style.color = 'yellow'
+                document.getElementById('couleur4').style.color = 'goldenrod'
                 document.getElementById('couleur4').innerHTML = document.getElementById('couleur4').innerHTML +'   :   '+ reponse_mots;
             }
             console.log(reponse_mots);
