@@ -49,7 +49,8 @@ Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<butt
         <span id="code4"></span>
     </div>
 
-    <div class="lock" id="inputnb"><input class="number" type="number" id="inputVerif" min="0" max="9999"></input></div>
+    <div class="lock" id="inputnb">
+    </div>
     <div class="keyboard"></div>
 
     <?php include("../back/game.php") ?>
