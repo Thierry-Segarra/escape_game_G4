@@ -50,7 +50,6 @@ Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bout
             <span class="couleurcacher" id="couleur2"></span>
             <span class="couleurcacher" id="couleur3"></span>
             <span class="couleurcacher" id="couleur4"></span>
-            <div class="reponse" id="reponse_mots"></div>
         </div>
 
         <div class="morse" id="morse"></div>
