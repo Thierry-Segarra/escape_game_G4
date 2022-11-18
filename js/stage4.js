@@ -156,6 +156,7 @@
                 transitionFermer(text,suivant);
             }else{
                 console.log('mauvaise reponse');
+                incrementCompteur()
             }
         }
     }
