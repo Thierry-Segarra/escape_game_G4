@@ -194,3 +194,11 @@ body{
     top: 160px;
     left: 50px;
 }
+
+.machine{
+    position: absolute;
+    top: 600px;
+    left: 10px;
+
+    width: 600px;
+}

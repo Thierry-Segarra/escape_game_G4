@@ -54,6 +54,8 @@ Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bout
 
         <div class="morse" id="morse"></div>
 
+        <img class="machine" src="../images/machine.png">
+
         <script src="../js/stage4.js"></script>
     </body>
 </html>
