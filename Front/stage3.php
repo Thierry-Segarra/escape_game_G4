@@ -24,7 +24,7 @@ Ils ont probablement des questions à vous poser.`,'<button class="bouton" oncli
 </html>
 
 <script type="text/javascript" src="../js/stage3.js" defer></script>
-
+<audio id="soundStage3" src="../sounds/stage3.wav" autoplay loop ></audio>
 
 <!-- Bouton VALIDER -->
 <!-- <div class="red_button" onclick="returnScore()">
@@ -244,3 +244,7 @@ Ils ont probablement des questions à vous poser.`,'<button class="bouton" oncli
 <audio id="failed" src="../sounds/failed.wav"></audio>
 <audio id="correct" src="../sounds/correct.wav"></audio>
 <audio id="aboiement" src="../sounds/chien_aboiement.wav"></audio>
+<script>
+    var audioStage3 = document.getElementById('soundStage3');
+    audioStage3.volume = 0.7;
+</script>

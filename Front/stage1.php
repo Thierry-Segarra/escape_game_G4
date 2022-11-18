@@ -13,6 +13,7 @@ Vous êtes notre dernier espoir, reprenez en main le projet et menez le jusqu'à
 Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<button class="bouton" onclick = "transitionOuver();lock_drow_function();start()">Au boulot !</button>');
 </script>
 <body>
+    <audio id="soundStage1" src="../sounds/stage1.wav" autoplay loop ></audio>
     <div class="sliding-background"></div>
     <canvas id="canvas" class="canvas"></canvas>
 
@@ -49,3 +50,8 @@ Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<butt
 
     <?php include("../back/game.php") ?>
 </body>
+
+<script type="text/javascript">
+        var audioStage1 = document.getElementById('soundStage1');
+        audioStage1.volume = 1;
+</script>

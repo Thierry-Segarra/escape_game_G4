@@ -14,7 +14,7 @@ Quels ont été vos points forts ?
 Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bouton" onclick = "transitionOuver();start()">Au boulot !</button>');
     </script>
     <body>
-
+        <audio id="soundStage4" src="../sounds/stage4.wav" autoplay loop ></audio>
         <div class="plate">
             <img class="motmele" src="../images/motmele.png">
             <div>
@@ -57,5 +57,11 @@ Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bout
         <img class="machine" src="../images/machine.png">
 
         <script src="../js/stage4.js"></script>
+        <script>
+            var audioStage4 = document.getElementById('soundStage4');
+            audioStage4.volume = 0.6;
+        </script>
+
+</script>
     </body>
 </html>
