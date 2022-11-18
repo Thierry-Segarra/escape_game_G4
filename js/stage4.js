@@ -57,7 +57,7 @@
             }
             console.log(reponse_mots);
             break;
-        case 'entraide':
+        case 'lucidite':
             if(mots4 == false){
                 reponse_mots = mots+'<br>';
                 mots4 = true;
