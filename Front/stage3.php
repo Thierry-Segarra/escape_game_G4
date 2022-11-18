@@ -18,7 +18,7 @@
     <script>
         textDinamique('textdinamique','text',`Le produit est en cours de développement.
 N'hésitez pas à prendre des nouvelles de votre équipes.
-Ils ont probablement des questions à vous poser.`,'<button class="bouton" onclick = "transitionOuver()">Au boulot !</button>');
+Ils ont probablement des questions à vous poser.`,'<button class="bouton" onclick = "transitionOuver();start()">Au boulot !</button>');
     </script>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <script>
         textDinamique('textdinamique','text',`Je vous présente votre équipe.
         Il ne manquait plus que vous pour les guider.
-        Donnez leur du boulot !`,'<button class="bouton" onclick = "transitionOuver()">Au boulot !</button>');
+        Donnez leur du boulot !`,'<button class="bouton" onclick = "transitionOuver();start()">Au boulot !</button>');
     </script>
 
     <body onload="load()">

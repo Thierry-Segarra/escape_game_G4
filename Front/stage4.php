@@ -11,7 +11,7 @@
     <script>
         textDinamique('textdinamique','text',`Nous arrivons à l'heure du bilan.
 Quels ont été vos points forts ?
-Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bouton" onclick = "transitionOuver()">Au boulot !</button>');
+Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bouton" onclick = "transitionOuver();start()">Au boulot !</button>');
     </script>
     <body>
 

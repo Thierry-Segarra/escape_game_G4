@@ -397,6 +397,7 @@ function verifier(){
     let suivant = "stage2.php";
     transitionFermer(text,suivant);
     lock_drow_function();
+    stop();
   }
 }
 
