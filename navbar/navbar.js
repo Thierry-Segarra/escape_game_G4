@@ -33,7 +33,7 @@
         }
         // Stage 4
         if ( url.match(/(stage4)/) ) {
-            content_indice.innerHTML = "Dans le mot mêlé, il y a</br><ul><li>2 mots en diagonale de 12 et 13 lettres</li><li>1 mot à l'horizontale de 8 lettres</li><li>1 mot à la verticale de 10 lettres</li></ul></br>Traduisez ensuite les codes en morse, saisissez le code et finissez votre projet !"
+            content_indice.innerHTML = "Dans le mot mêlé, il y a</br><ul><li>Un mot en diagonale de 12 lettres qui commence par O et finit par N</li><li>Un mot en diagonale de 13 lettres qui commence par C et finit par N</li><li>Un mot à l'horizontale de 8 lettres qui commence par L et finit par E</li><li>Un mot à la verticale de 10 lettres qui commence par L et finit par P</li></ul></br>Traduisez ensuite les codes en morse, saisissez le code et finissez votre projet !"
         }
     }
 
