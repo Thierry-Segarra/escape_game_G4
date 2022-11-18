@@ -93,6 +93,7 @@ function validquizz()  {
     }
     else if (document.getElementById("reponseA1").checked || document.getElementById("reponseA2").checked || document.getElementById("reponseA4").checked){
         document.getElementById("failed").play();
+        incrementCompteur()
     }
     if (document.getElementById("reponseB2").checked) { 
         btn2.src ="../images/dude_2_happy.png"; 
@@ -101,6 +102,7 @@ function validquizz()  {
     }
     else if (document.getElementById("reponseB1").checked || document.getElementById("reponseB3").checked || document.getElementById("reponseB4").checked){
         document.getElementById("failed").play();
+        incrementCompteur()
     }
     if (document.getElementById("reponseC4").checked) { 
         btn3.src ="../images/dude_4_happy.png";
@@ -109,6 +111,7 @@ function validquizz()  {
     }
     else if (document.getElementById("reponseC1").checked || document.getElementById("reponseC2").checked || document.getElementById("reponseC3").checked){
         document.getElementById("failed").play();
+        incrementCompteur()
     }
     if (document.getElementById("reponseD1").checked) {  
         btn4.src ="../images/dude_5_happy.png";
@@ -117,6 +120,7 @@ function validquizz()  {
     }
     else if (document.getElementById("reponseD2").checked || document.getElementById("reponseD3").checked || document.getElementById("reponseD4").checked){
         document.getElementById("failed").play();
+        incrementCompteur()
     }
 }
 
@@ -126,8 +130,10 @@ function ChienAnimation() {
     document.getElementById("chien").style.marginLeft = "130vw";
     document.getElementById("aboiement").autoplay;
 }
+
 var image_chien = 1;
 initicialChien();
+
 function initicialChien(){
     document.getElementById('initchien').innerHTML = '<img id="chien" class="image" src="../images/chien1.png" alt="">';
     setTimeout(() => {
@@ -155,13 +161,13 @@ function animationChien(){
 function returnScore() {
     document.getElementById("resultat").innerHTML =
         "Vous avez répondu correctement a " + answersPlayer + " question(s) sur " + totalAnswers;
-    //if (getScore() > 3) {
+    if (answersPlayer == 4) {
         console.log("Stage réussi");
         let text = `Un chef de projet qui connait aussi les bases du développement WEB.. 
         Vous êtes de l'Institut G4 ? Vous êtes l'élu !`;
         let suivant = "stage4.php";
         transitionFermer(text,suivant);
-    //}
+    }
 }
 
 
