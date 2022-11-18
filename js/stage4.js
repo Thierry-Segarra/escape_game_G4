@@ -154,6 +154,7 @@
                 Je vous remercie sincèrement, n'hésitez pas à revenir !`;
                 let suivant = "page_fin.php";
                 transitionFermer(text,suivant);
+                stop();
             }else{
                 console.log('mauvaise reponse');
                 incrementCompteur()

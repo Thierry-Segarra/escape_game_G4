@@ -167,6 +167,7 @@ function returnScore() {
         Vous êtes de l'Institut G4 ? Vous êtes l'élu !`;
         let suivant = "stage4.php";
         transitionFermer(text,suivant);
+        stop();
     }
 }
 
