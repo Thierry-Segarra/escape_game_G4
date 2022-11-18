@@ -24,7 +24,7 @@ require('../database.php');
 
 <body>
     <!-- euh--------------------------------------------------------------- -->
-
+    <audio id="soundEnd" src="../sounds/ecran_titre.wav" autoplay loop ></audio>
     <nav id='nav' class='navbar'>
         <canvas width="100" height="100" class='navbar-canvas' id="navbar-grid"></canvas>
 
@@ -99,6 +99,11 @@ require('../database.php');
             <div class="shooting-stars"></div>
         </div>
     </div>
+
+    <script>
+        var audioEnd = document.getElementById('soundEnd');
+        audioEnd.volume = 0.8;
+    </script>
 </body>
 
 <footer>

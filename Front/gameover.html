@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <audio id="soundGameOver" src="../sounds/game_over.wav" autoplay ></audio>
     <div class="container">
         <div class="sky">
 
@@ -39,3 +40,8 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    var audioGameOver = document.getElementById('soundGameOver');
+    audioGameOver.volume = 1;
+</script>

@@ -17,6 +17,7 @@
     </script>
 
     <body onload="load()">
+        <audio id="soundStage2" src="../sounds/stage2.wav" autoplay loop ></audio>
         <div class="whole_table">
 
             <!--Bulles de droite-->
@@ -121,6 +122,9 @@
         <audio id="audio_hint" src="../sounds/hint.wav"></audio>
         <audio id="audio_validation" src="../sounds/validation.wav"></audio>
         <audio id="audio_down" src="../sounds/down.wav"></audio>
-        <script src="../js/stage2.js"></script>
+        <script src="../js/stage2.js">
+            var audioStage2 = document.getElementById('soundStage2');
+            audioStage2.volume = 0.1;
+        </script>
     </body>
 </html>
