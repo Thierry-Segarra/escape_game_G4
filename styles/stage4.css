@@ -1,7 +1,7 @@
 body{
     background-image: url("../images/fond.png");
     background-repeat: repeat;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     font-family: "Pixel";
 }
@@ -195,12 +195,10 @@ body{
     left: 50px;
 }
 
-.reponse{
-    font-family: "Pixel";
-    line-height: 150%;
-    color: black;
+.machine{
     position: absolute;
+    top: 600px;
+    left: 10px;
 
-    top: 70px;
-    left: 200px;
+    width: 600px;
 }

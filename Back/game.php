@@ -312,10 +312,11 @@ function draw() {
     x += dx;
     y += dy;
   }
-  requestAnimationFrame(draw);
+  //requestAnimationFrame(draw);
 
 }
-draw();
+
+setInterval(draw, 1000/60);
 
 
 function right(mur,paddleX,paddleY,playerSize){
@@ -397,6 +398,7 @@ function verifier(){
     let suivant = "stage2.php";
     transitionFermer(text,suivant);
     lock_drow_function();
+    stop();
   }
 }
 

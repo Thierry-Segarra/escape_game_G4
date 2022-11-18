@@ -10,8 +10,7 @@ include("../Back/transition.php");
 <script>
     textDinamique('textdinamique','text',`Le projet ne doit pas tomber à l'eau !
 Vous êtes notre dernier espoir, reprenez en main le projet et menez le jusqu'à sa réussite !
-Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<button class="bouton" onclick = "transitionOuver();lock_drow_function()">Au boulot !</button>');
-
+Commencez par retrouver les livrables perdus et rejoignez votre équipe.`,'<button class="bouton" onclick = "transitionOuver();lock_drow_function();start()">Au boulot !</button>');
 </script>
 <body>
     <audio id="soundStage1" src="../sounds/stage1.wav" autoplay loop ></audio>

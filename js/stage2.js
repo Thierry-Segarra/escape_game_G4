@@ -124,6 +124,7 @@ function gameOver(){
     Prochaine étape: la phase de production !`;
     let suivant = "stage3.php";
     transitionFermer(text,suivant);
+    stop();
 }
 
 function verification(){

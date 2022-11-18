@@ -34,6 +34,7 @@
                 reponse_mots = mots+'<br>';
                 mots1 = true;
                 document.getElementById('couleur1').style.color = 'red';
+                document.getElementById('couleur1').innerHTML = document.getElementById('couleur1').innerHTML +'   :   '+ reponse_mots;
                 
             }
             console.log(reponse_mots);
@@ -43,6 +44,7 @@
                 reponse_mots = mots+'<br>';
                 mots2 = true;
                 document.getElementById('couleur2').style.color = 'blue';
+                document.getElementById('couleur2').innerHTML = document.getElementById('couleur2').innerHTML +'   :   '+ reponse_mots;
             }
             console.log(reponse_mots);
             break;
@@ -51,19 +53,21 @@
                 reponse_mots = mots+'<br>';
                 mots3 = true;
                 document.getElementById('couleur3').style.color = 'green';
+                document.getElementById('couleur3').innerHTML = document.getElementById('couleur3').innerHTML +'   :   '+ reponse_mots;
             }
             console.log(reponse_mots);
             break;
-        case 'entraide':
+        case 'lucidite':
             if(mots4 == false){
                 reponse_mots = mots+'<br>';
                 mots4 = true;
                 document.getElementById('couleur4').style.color = 'yellow'
+                document.getElementById('couleur4').innerHTML = document.getElementById('couleur4').innerHTML +'   :   '+ reponse_mots;
             }
             console.log(reponse_mots);
             break;
         }
-        document.getElementById('reponse_mots').innerHTML = document.getElementById('reponse_mots').innerHTML + reponse_mots;
+        //document.getElementById('reponse_mots').innerHTML = document.getElementById('reponse_mots').innerHTML + reponse_mots;
         afficherMorce();
     }
 
@@ -150,8 +154,10 @@
                 Je vous remercie sincèrement, n'hésitez pas à revenir !`;
                 let suivant = "page_fin.php";
                 transitionFermer(text,suivant);
+                stop();
             }else{
                 console.log('mauvaise reponse');
+                incrementCompteur()
             }
         }
     }

@@ -11,7 +11,7 @@
     <script>
         textDinamique('textdinamique','text',`Nous arrivons à l'heure du bilan.
 Quels ont été vos points forts ?
-Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bouton" onclick = "transitionOuver()">Au boulot !</button>');
+Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bouton" onclick = "transitionOuver();start()">Au boulot !</button>');
     </script>
     <body>
         <audio id="soundStage4" src="../sounds/stage4.wav" autoplay loop ></audio>
@@ -50,10 +50,11 @@ Dites-nous la vérité, n'utilisez pas de message codé...`,'<button class="bout
             <span class="couleurcacher" id="couleur2"></span>
             <span class="couleurcacher" id="couleur3"></span>
             <span class="couleurcacher" id="couleur4"></span>
-            <div class="reponse" id="reponse_mots"></div>
         </div>
 
         <div class="morse" id="morse"></div>
+
+        <img class="machine" src="../images/machine.png">
 
         <script src="../js/stage4.js"></script>
         <script>
