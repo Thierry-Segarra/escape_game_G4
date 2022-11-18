@@ -61,8 +61,7 @@
             <div class="clock"></div>
 
             <br><br><br><br>
-
-
+            
             <div class="layer">
                 <img class="person_left" id="person_1" src="../images/dude_1.png">
                 <div class="table_top">
@@ -112,10 +111,9 @@
                 </div>
             </div>
             <div class="chef">
-                <img class="person_left" id="chef" src="../images/chef_bad.png">
+                <img class="person_left" id="chef" src="../images/chef_bad2.png">
             </div>
         </div>
-
 
         <audio id="audio_select" src="../sounds/select.wav"></audio>
         <audio id="audio_hint" src="../sounds/hint.wav"></audio>

@@ -162,6 +162,7 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         FRONT1.style.border = "dashed 2px rgb(37, 37, 37)";
+        FRONT1.style.border = "border: right 5px green";
         partie_front_1 = false;
     }
 
