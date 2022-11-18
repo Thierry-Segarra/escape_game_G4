@@ -13,6 +13,9 @@
 .main .vies {
     display: inline-flex;
     margin: auto;
+    transform:scaleX(-1);
+    width:67%;
+    margin-left:84%;
 }
 
 .vie img {
@@ -22,6 +25,7 @@
 .timer {
     grid-column-start: 3;
     margin: auto;
+    color:white;
 }
 
 .indice {
@@ -85,6 +89,8 @@ div#texte_indice {
 .closebtn {
   text-decoration: none;
   float: right;
+  margin-top:-3%;
+  padding:10px;
   font-size: 35px;
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -93,6 +99,15 @@ div#texte_indice {
 #refuse_ind a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+#refuse_ind,
+#valid_ind {
+  margin: 20px;
+  /* border: 2px solid lightgray; */
+  box-shadow: 1px 2px 4px 2px;
+  border-radius: 5px;
+  padding: 7px;
 }
 
 .closebtn:hover,

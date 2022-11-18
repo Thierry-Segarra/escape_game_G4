@@ -18,24 +18,21 @@
         document.getElementById("ask_indice").style.display = 'none';
 
         var url = window.location.pathname;
-        // Notre page (à supprimer A LA FIN)
-        if ( url.match(/(navbar.php)/) ) {
-            content_indice.innerHTML = "bonjour je suis l'indice test";
-        }
+    
         // Stage 1
-        if ( url.match(/(stage_1)/) ) {
+        if ( url.match(/(stage1)/) ) {
             content_indice.innerHTML = "Vous êtes un chef de projet !! Dans quel ordre les livrables doivent-ils être rédigés ?"
         }
         // Stage 2
-        if ( url.match(/(stage_2)/) ) {
+        if ( url.match(/(stage2)/) ) {
             content_indice.innerHTML = "Pensez à attribuer les bonnes tâches aux bons rôles et à ne pas les surcharger !"
         }
         // Stage 3
-        if ( url.match(/(stage_3)/) ) {
+        if ( url.match(/(stage3)/) ) {
             content_indice.innerHTML = "Pas besoin d'indice quand la réponse est sous vos yeux !"
         }
         // Stage 4
-        if ( url.match(/(stage_4)/) ) {
+        if ( url.match(/(stage4)/) ) {
             content_indice.innerHTML = "Dans le mot mêlé, il y a</br><ul><li>2 mots en diagonale de 12 et 13 lettres</li><li>1 mot à l'horizontale de 8 lettres</li><li>1 mot à la verticale de 10 lettres</li></ul></br>Traduisez ensuite les codes en morse, saisissez le code et finissez votre projet !"
         }
     }
