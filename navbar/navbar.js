@@ -52,9 +52,12 @@
 
     var btn_start, btn_stop, s = 0,mn = 0;
     /** TIMER **/
-    window.onload = function()
+    chronos_init();
+    function chronos_init()
     {
+
         if (localStorage != null) {
+            console.log("chrono");
             temps2 = localStorage.getItem('temps');
             temps3 = temps2.split(":");
             mn = parseInt(temps3[0]);

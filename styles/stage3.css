@@ -226,8 +226,8 @@ body {
 }
 .close {
     color: #aaaaaa;
-    margin-left:58%;
-    font-size: 28px;
+    margin-left:2vw;
+    font-size: 58px;
     font-weight: bold;
 }
 .close:hover,
@@ -241,8 +241,8 @@ body {
 /* Quizz */
 .choices {
     list-style-type: none;
-    margin-left: 1%;
-    margin-top: 2%;
+    margin-left: 6%;
+    margin-top: 4%;
 }
 .choices li {
     margin-bottom: 20px;
@@ -265,11 +265,11 @@ input[type="radio"] {
 
 .title {
     /* text-align: center; */
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-right: 50%;
+    margin-left: 6%;
+    margin-top: 4%;
+    margin-right: 35%;
     /* margin: 30px; */
 }
 input[type="radio"] {
@@ -305,12 +305,12 @@ input[type="radio"] {
     font-weight: bold;
 }
 .buttonQuestion {
-    margin-left: 28%;
-    margin-top: 1%;
+    margin-left: 18%;
+    margin-top: 3%;
     cursor: pointer;
-    font-size: inherit;
+    font-size: 20px;
     color: white;
     background: teal;
     border-radius: 8px;
-    padding: 10px;
+    padding: 16px;
 }

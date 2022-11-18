@@ -117,12 +117,12 @@ document.addEventListener('mousemove', function(event) {
 }, true);
 
 // Verification des taches //
-
+var text = `Votre organisation nous mènera au succès !
+    Prochaine étape: la phase de production !`;
+    var suivant = "stage3.php";
 function gameOver(){
     document.getElementById("chef").src = "../images/chef_good.png";
-    let text = `Votre organisation nous mènera au succès !
-    Prochaine étape: la phase de production !`;
-    let suivant = "stage3.php";
+    
     transitionFermer(text,suivant);
     stop();
 }

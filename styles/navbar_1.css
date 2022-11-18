@@ -20,7 +20,7 @@ button {
   background-color: #151515;
   overflow: hidden;
   cursor: crosshair;
-  z-index: 2;
+  z-index: 100;
   top: -100px;
   left: -10px;
 }

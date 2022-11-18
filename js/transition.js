@@ -1,4 +1,8 @@
+var interval_text;
+var t = 0;
+
 function transitionFermer(text,lien) {
+  t = 0;
   document.getElementById("transition").style.marginLeft = "-100px";
   document.getElementById("text").innerHTML = '<textarea class="area" id="textdinamique" disabled></textarea>';
   let div = 'textdinamique';
@@ -9,8 +13,7 @@ function transitionFermer(text,lien) {
 function transitionOuver() {
   document.getElementById("transition").style.marginLeft = "100vw";
 }
-var interval_text;
-var t = 0;
+
 
 function textDinamique(div,bouton, text,suivant) {
 var nb_text = text.length;

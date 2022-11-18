@@ -135,7 +135,10 @@
         nb_reponse_lock = nb_reponse_lock + nb_morce;
         console.log(nb_reponse_lock);
     }
-
+    var text = `En 20 ans d'expérience je n'avais jamais vu quelqu'un prendre les commandes aussi rapidement.
+    Grâce à vous, le projet est un franc succès.
+    Je vous remercie sincèrement, n'hésitez pas à revenir !`;
+    var suivant = "page_fin.php";
     function verif_lock_nb(){
         if(lock_1 == true && lock_2 == true && lock_3 == true && lock_4 == true){
             let nb_lock = ''
@@ -149,10 +152,7 @@
 
             if (nb_lock == nb_reponse_lock) {
                 console.log('bonne reponse');
-                let text = `En 20 ans d'expérience je n'avais jamais vu quelqu'un prendre les commandes aussi rapidement.
-                Grâce à vous, le projet est un franc succès.
-                Je vous remercie sincèrement, n'hésitez pas à revenir !`;
-                let suivant = "page_fin.php";
+                
                 transitionFermer(text,suivant);
                 stop();
             }else{

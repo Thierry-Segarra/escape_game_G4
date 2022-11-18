@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 17 nov. 2022 à 14:20
--- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
+-- Hôte : 127.0.0.1
+-- Généré le : ven. 18 nov. 2022 à 19:29
+-- Version du serveur :  10.4.14-MariaDB
+-- Version de PHP : 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,25 +27,41 @@ SET time_zone = "+00:00";
 -- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
   `name` varchar(13) CHARACTER SET utf16 COLLATE utf16_bin NOT NULL,
-  `time` varchar(10) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+  `time` time NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`id`, `name`, `time`) VALUES
-(4, 'fvrv', NULL),
-(5, 'dgsgdsg', NULL),
-(6, 'dzf', '10:00'),
-(7, 'dzf', '10:00'),
-(8, 'test', '10:00'),
-(9, 'dzfz', '10:00');
+(1, 'Philipe', '07:33:00'),
+(2, 'El Mejor', '03:36:00'),
+(3, 'Jeremi', '02:43:00'),
+(4, 'mast', '04:12:00');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

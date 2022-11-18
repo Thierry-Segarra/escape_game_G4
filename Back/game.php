@@ -388,14 +388,16 @@ function up(mur,paddleX,paddleY,playerSize){
   return lock;
 }
 
+    var text = `Surprenant ! La phase de cadrage ne vous a pas vu venir.
+    Sans ces livrables, le projet se dirigerait droit dans le mur !`;
+    var suivant = "stage2.php";
+
 function verifier(){
   inputVerif = document.getElementById("inputVerif").value;
   
   console.log(inputVerif);
   if(inputVerif == code){
-    let text = `Surprenant ! La phase de cadrage ne vous a pas vu venir.
-    Sans ces livrables, le projet se dirigerait droit dans le mur !`;
-    let suivant = "stage2.php";
+    
     transitionFermer(text,suivant);
     lock_drow_function();
     stop();

@@ -113,12 +113,12 @@ function validquizz()  {
         document.getElementById("failed").play();
         incrementCompteur()
     }
-    if (document.getElementById("reponseD1").checked) {  
+    if (document.getElementById("reponseD3").checked) {  
         btn4.src ="../images/dude_5_happy.png";
         document.getElementById("correct").play();
         answersPlayer++ 
     }
-    else if (document.getElementById("reponseD2").checked || document.getElementById("reponseD3").checked || document.getElementById("reponseD4").checked){
+    else if (document.getElementById("reponseD2").checked || document.getElementById("reponseD1").checked || document.getElementById("reponseD4").checked){
         document.getElementById("failed").play();
         incrementCompteur()
     }
@@ -158,16 +158,18 @@ function animationChien(){
 
 
 //Méthode qui retourne la valeur du score du joueur
+        var text = `Un chef de projet qui connait aussi les bases du développement WEB.. 
+        Vous êtes de l'Institut G4 ? Vous êtes l'élu !`;
+        var suivant = "stage4.php";
 function returnScore() {
     document.getElementById("resultat").innerHTML =
         "Vous avez répondu correctement a " + answersPlayer + " question(s) sur " + totalAnswers;
     if (answersPlayer == 4) {
         console.log("Stage réussi");
-        let text = `Un chef de projet qui connait aussi les bases du développement WEB.. 
-        Vous êtes de l'Institut G4 ? Vous êtes l'élu !`;
-        let suivant = "stage4.php";
-        transitionFermer(text,suivant);
         stop();
+        console.log(text,suivant);
+        transitionFermer(text,suivant);
+        
     }
 }
 
