@@ -162,10 +162,7 @@ function verification(){
         document.getElementById("audio_validation").play();
     }else{
         FRONT1.style.border = "dashed 2px rgb(37, 37, 37)";
-<<<<<<< Updated upstream
-=======
         FRONT1.style.borderRight = "solid 20px green";
->>>>>>> Stashed changes
         partie_front_1 = false;
     }
 
