@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #111;
   margin: 0;
@@ -79,6 +83,10 @@ nav-menu-button {
   place-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav-button {
 
   border-radius: 20px;
@@ -102,3 +110,4 @@ nav-menu-button {
   box-shadow: 0 0 10px 0 #fae500;
   color: #151515;
 }
+

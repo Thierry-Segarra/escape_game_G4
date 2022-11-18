@@ -37,6 +37,11 @@ div#texte_indice {
     display: none;
 }
 
+#texte_indice h3,
+#ask_indice h4 {
+  padding-left: 15px;
+}
+
 /********* MODALE pour INDICE **********/
 /* Décrire l'animation */
 @keyframes slideDownFadeIN {

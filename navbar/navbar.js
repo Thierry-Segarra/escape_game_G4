@@ -41,13 +41,12 @@
     {
         error++;
         if (error === 1 ) {
-            vie_three.src = "./assets/coeur_vide.png"
+            vie_one.src = "./assets/coeur_vide.png"
         } else if (error === 2 ) {
             vie_two.src = "./assets/coeur_vide.png"
         } else if (error === 3 ) {
-            vie_one.src = "./assets/coeur_vide.png"
-            // alert('GAME OVER')
-            // document.getElementById("id01").classList.remove("modal")
+            vie_three.src = "./assets/coeur_vide.png"
+            document.location.href="../Front/gameover.html";
         }
     }
 

@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./navbar.css">
-    <!-- <link rel="stylesheet" href="../Styles/modal.css"> -->
-    <link rel="stylesheet" href="../Styles/nav.css">
-    <link rel="stylesheet" href="../Styles/page_fin.css">
+    <link rel="stylesheet" href="../styles/navbar_1.css">
+    <link rel="stylesheet" href="../styles/page_fin_1.css">
     
     <title>NAVBAR</title>
 </head>
@@ -84,9 +83,7 @@
         </div>
     </nav>
 
-    <script src="./navbar.js">
-         <script src="../script.js"></script>
-       
+    <script src="./navbar.js">       
     </script>
     
 </body>
