@@ -18,15 +18,15 @@
 
         "x1" : 17,
         "y1" : 330,
-        "titre1": "Spécifications fonctionnelles",
+        "titre1": "Organisation du projet",
 
         "x2" : 580,
         "y2" : 85,
-        "titre2": "Spécifications techniques",
+        "titre2": "Spécifications fonctionnelles",
 
         "x3" : 582,
         "y3" : 470,
-        "titre3": "Organisation du projet",
+        "titre3": "Spécifications techniques",
 
         "size" :40
     },
